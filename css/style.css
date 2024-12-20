@@ -114,6 +114,7 @@ input[type="text"]:focus {
 }
 .basic-select {
   position: relative;
+  /* display: inline-block; */
 }
 .basic-select::after {
   content: "\e943";
@@ -1215,12 +1216,12 @@ tbody tr:hover:not(.calendar-table tr) {
   );
   margin: 20px 0px;
 }
-#consult-tbody td {
+#counsel-tbody td {
   line-height: 1.6rem;
   padding: 15px;
   font-size: 13px; 
 }
-#consult-tbody td:last-child {
+#counsel-tbody td:last-child {
   text-align: left;
   width: 50%;
   white-space: normal;
@@ -1329,15 +1330,15 @@ tbody tr:hover:not(.calendar-table tr) {
 .event.orange {
   background: #db4b3f;
 }
-/* ======================= consultation page ======================= */
-.consult-section {
+/* ======================= counselation page ======================= */
+.counsel-section {
   width: 100%;
 }
-.consult-header {
+.counsel-header {
   display: flex;
   justify-content: space-between;
 }
-.consult-title {
+.counsel-title {
   font-weight: 500;
   font-size: 20px;
   margin-bottom: 10px;
@@ -1406,8 +1407,40 @@ tbody tr:hover:not(.calendar-table tr) {
   padding: 0px 20px;
 }
 .counsel-write .basic-select {
-  width: 10%;
+  /* width: 10%; */
 }
 .counsel-write .date-input {
   width: 60%;
+}
+/* modal */
+.modal {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  /* display: none; */
+}
+.modal-content {
+  background-color: #fff;
+  width: 900px;
+  border-radius: 10px;
+  height: 500px;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  padding: 40px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+}
+.modal-header {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.btn-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
 }
