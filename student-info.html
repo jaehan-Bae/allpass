@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="/js/custom.js"></script>
+    <script src="/js/loadHTML.js"></script>
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="main-container">
+    <!-- header -->
+    <div id="header-load"></div>
+    <div class="main-frame">
+      <!-- left nav bar -->
+      <aside id="sidebar-load"></aside>
+      <main class="main-info">
+        <div class="student-frame">
+          <!-- section:left -->
+          <section class="info-summary">
+            <div class="info-title">
+              <h2>학생 정보</h2>
+              <div class="new-regist">+ 신규 등록</div>
+            </div>
+            <div class="info-filters">
+              <div class="basic-select">
+                <select name="subject" id="subject-filter">
+                  <option value="all">과목 전체</option>
+                  <option value="">영재</option>
+                  <option value="">수재</option>
+                  <option value="">신동</option>
+                  <option value="">천재</option>
+                </select>
+              </div>
+              <div class="basic-select">
+                <select name="teacher" id="subject-filter">
+                  <option value="teacher1">김호호 선생님</option>
+                  <option value="teacher2">김호이 선생님</option>
+                  <option value="teacher3">김호삼 선생님</option>
+                </select>
+              </div>
+            </div>
+            <div class="student-search join-group">
+              <input type="text" id="student-name" name="studentName" placeholder="이름으로 검색">
+            </div>
+            <div class="time-order">
+              <div class="checkbox-group">
+                <input type="checkbox" id="institute-exist" name="institute" checked>
+                <label for="institute-exist">재원</label>
+                <input type="checkbox" id="institute-leave" name="institute">
+                <label for="institute-leave">퇴원</label>
+              </div>
+              <div class="basic-select time-select">
+                <select name="timeLine" id="time-line">
+                  <option value="lately">최신 등록순</option>
+                  <option value="past">과거 등록순</option>
+                </select>
+              </div>
+            </div>
+            <div class="table-frame">
+              <table class="basic-table">
+                <thead>
+                  <tr>
+                    <th>No</th>
+                    <th>이름</th>
+                    <th>학교/유치원</th>
+                    <th>학년</th>
+                    <th>수강과목</th>
+                  </tr>
+                </thead>
+                <tbody id="student-tbody">
+                  <tr>
+                    <td>1</td>
+                    <td>김호호</td>
+                    <td>호호초등학교</td>
+                    <td>초1</td>
+                    <td>초등전체, 새움, 독클</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>김호이</td>
+                    <td>호호유치원</td>
+                    <td>예비</td>
+                    <td>호호하니, 호호루키</td>
+                  </tr>                
+                  <tr>
+                    <td>3</td>
+                    <td>김호삼</td>
+                    <td>호호유치원</td>
+                    <td>예비</td>
+                    <td>호호하니, 호호루키</td>
+                  </tr>                
+                  <tr>
+                    <td>4</td>
+                    <td>김호사</td>
+                    <td>호호유치원</td>
+                    <td>예비</td>
+                    <td>호호하니, 호호루키</td>
+                  </tr>                
+                  <tr>
+                    <td>5</td>
+                    <td>김호오</td>
+                    <td>호호유치원</td>
+                    <td>예비</td>
+                    <td>호호하니, 호호루키</td>
+                  </tr>                
+                  <tr>
+                    <td>7</td>
+                    <td>김호칠</td>
+                    <td>호호유치원</td>
+                    <td>예비</td>
+                    <td>호호하니, 호호루키</td>
+                  </tr>                
+                  <tr>
+                    <td>6</td>
+                    <td>김호육</td>
+                    <td>호호유치원</td>
+                    <td>예비</td>
+                    <td>호호하니, 호호루키</td>
+                  </tr>                
+                </tbody>
+              </table>
+            </div>
+            <div class="sibling-list">
+              <h3>형제 리스트</h3>
+              <div class="table-frame">
+                <table class="sibling-table">
+                  <thead>
+                    <tr>
+                      <th>No</th>
+                      <th>이름</th>
+                      <th>학교/유치원</th>
+                      <th>학년</th>
+                      <th>수강과목</th>
+                    </tr>
+                  </thead>
+                  <tbody id="sibling-tbody">
+                    <tr>
+                      <td>1</td>
+                      <td>김호일</td>
+                      <td>호호초등학교</td>
+                      <td>초1</td>
+                      <td>초등전체, 새움, 독클</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>김호이</td>
+                      <td>호호초등학교</td>
+                      <td>초1</td>
+                      <td>초등전체, 새움, 독클</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+          
+          <!-- section:right -->
+          <section class="info-desc">
+            <div class="info-tab-inner">
+              <div class="info-tab-btn">
+                <a href="#tab1" class="active">기본정보</a>
+                <a href="#tab2">수강과목/회비</a>
+                <a href="#tab3">출결</a>
+                <a href="#tab4">상담내역</a>
+              </div>
+              <div class="info-tab-content">
+                <div id="tab1" class="tab active">
+                  <form action="" class="student-form">
+                    <!-- 상태 -->
+                    <div class="form-row">
+                      <label for="status">상태</label>
+                      <div class="radio-group">
+                        <input type="radio" id="institute-exist" name="institute" value="exist" checked>
+                        <label for="institute-exist">재원</label>
+                        <input type="radio" id="institute-leave" name="institute" value="leave">
+                        <label for="institute-leave">퇴원</label>
+                      </div>
+                    </div>
+                    <!-- 이름, 생년월일 -->
+                    <div class="form-row">
+                      <label for="student-name">이름</label>
+                      <input type="text" id="student-name" name="studentName" class="basic-input" placeholder="이름을 입력해주세요">
+                      <label for="birthdate">생년월일</label>
+                      <input type="text" id="birthdate"  name="birthDate" class="basic-input" placeholder="생년월일을 입력해주세요">
+                    </div>
+                    <!-- 학교, 학년 -->
+                    <div class="form-row">
+                      <label for="school-input">학교</label>
+                      <input type="text" id="school-input" name="school" class="basic-input" placeholder="학교를 입력해주세요">
+                      <label for="grade-filter">학년</label>
+                      <div class="basic-select">
+                        <select name="grade" id="grade-filter">
+                          <option value="">초1</option>
+                          <option value="">초2</option>
+                        </select>
+                      </div>
+                    </div>
+                    <!-- 성별 -->
+                    <div class="form-row">
+                      <label>성별</label>
+                      <div class="radio-group">
+                        <input type="radio" name="gender" id="male" checked>
+                        <label for="male">남자</label>
+                        <input type="radio" name="gender" id="female">
+                        <label for="female">여자</label>
+                      </div>
+                    </div>
+                    <!-- 부모HP -->
+                    <div class="form-row">
+                      <label for="guardian-contact-group">부모HP</label>
+                      <div class="phone-group" id="guardian-contact-group">
+                        <input type="text" id="phone-part1" class="basic-input" name="guardianPhonePart1" maxlength="3" placeholder="010">
+                        <span class="dash">-</span>
+                        <input type="text" id="phone-part2" class="basic-input" name="guardianPhonePart2" maxlength="4" placeholder="0000">
+                        <span class="dash">-</span>
+                        <input type="text" id="phone-part3" class="basic-input" name="guardianPhonePart3" maxlength="4" placeholder="0000">
+                      </div>
+                      <label for="relation-filter">학생과의 관계</label>
+                      <div class="basic-select">
+                        <select id="relation-filter" name="relation" class="basic-select">
+                          <option value="mother">모</option>
+                          <option value="father">부</option>
+                        </select>
+                      </div>
+                    </div>
+                    <!-- 주소 -->
+                    <div class="form-full form-row">
+                      <label for="address-input">주소</label>
+                      <input type="text" id="address-input" name="address" class="basic-input" placeholder="주소를 입력해 주세요">
+                    </div>
+                    <!-- 한스쿨, 북스쿨 -->
+                    <div class="form-row">
+                      <label for="hanschool-date">한스쿨 입회</label>
+                      <input type="date" id="hanschool-date" name="hanschoolDate" class="date-input">
+                      <label for="bookschool-date">북스쿨 입회</label>
+                      <input type="date" id="bookschool-date" name="bookschoolDate" class="date-input">
+                    </div>
+                    <p class="info-note">
+                      ※ 학생 계정은 등록된 부모님의 휴대폰 뒷번호 8자리+00으로 자동 생성됩니다.
+                    </p>
+                    <button type="submit" class="save-btn">저장하기</button>
+                  </form>
+                </div>
+                <div id="tab2" class="tab">
+                  <form action="" class="student-form">
+                    <div class="form-row">
+                      <label for="status">수강과목</label>
+                      <div class="radio-group">
+                        <input type="radio" id="han-book-school" name="bookSchool" checked>
+                        <label for="han-book-school">한스쿨+북스쿨</label>
+                        <input type="radio" id="han-school" name="bookSchool">
+                        <label for="institute-leave">한스쿨</label>
+                        <input type="radio" id="book-school" name="bookSchool">
+                        <label for="book-school">북스쿨</label>
+                      </div>
+                    </div>
+                    <!-- 한스쿨 단계 -->
+                    <div class="han-logo">
+                      <img src="/image/logo_han.png" alt="">
+                      <hr class="han-hr">
+                    </div>
+                    <div class="form-row">
+                      <label for="subject">한스쿨 단계</label>
+                      <div class="basic-select">
+                        <select id="subject" name="subject" class="basic-select">
+                          <option value="">초등천재</option>
+                          <option value="">초등박사</option>
+                        </select>
+                      </div>
+                      <label for="start-date">시작일자</label>
+                      <input type="date" id="start-date" name="startDate" class="date-input">
+                    </div>
+                    <div class="form-row">
+                      <label for="teacher-filter">담당 선생님</label>
+                      <div class="basic-select">
+                        <select id="teacher-filter" name="teacher" class="basic-select">
+                          <option value="">호호쌤</option>
+                          <option value="">하니쌤</option>
+                        </select>
+                      </div>
+
+                    </div>
+                    <!-- 북스쿨 단계 -->
+                    <div class="book-logo">
+                      <img src="/image/logo_reader.png" alt="">
+                      <hr class="book-hr">
+                    </div>
+                    <div class="form-row">
+                      <label for="book-step">북스쿨 단계</label>
+                      <div class="basic-select">
+                        <select id="book-step" name="bookStep" class="basic-select">
+                          <option value="">새움</option>
+                          <option value="">2</option>
+                        </select>
+                      </div>
+                      <label for="start-date">시작일자</label>
+                      <input type="date" id="start-date" name="startDate" class="date-input">
+                    </div>
+                    <div class="form-row">
+                      <label for="teacher-filter">담당 선생님</label>
+                      <div class="basic-select">
+                        <select id="teacher-filter" name="teacher" class="basic-select">
+                          <option value="">호호쌤</option>
+                          <option value="">하니쌤</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="dotted-line"></div>
+                    <!-- 주소 -->
+                    <div class="form-row">
+                      <label for="education-fee">교육비</label>
+                      <input type="text" id="education-fee" name="educationFee" class="basic-input" placeholder="">
+                      <label for="textbook-fee">교재비</label>
+                      <input type="text" id="textbook-fee" name="textbookFee" class="basic-input" placeholder="">
+                    </div>
+                    <!-- 메모 -->
+                    <div class="form-row">
+                      <label for="memo">메모사항</label>
+                      <textarea id="memo" name="notes" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="save-btn">저장하기</button>
+                  </form>
+                </div>
+                <div id="tab3" class="tab">
+                  <form action="" class="student-form">
+                    <div class="calendar-container">
+                      <div class="calendar-header">
+                        <div class="month-navigation">
+                          <button class="arrow-left"></button>
+                          <span class="current-month">2025년 1월</span>
+                          <button class="arrow-right"></button>
+                        </div>
+                        <button class="today-button">오늘</button>
+                      </div>
+                      <table class="calendar-table">
+                        <thead>
+                          <tr>
+                            <th>일</th>
+                            <th>월</th>
+                            <th>화</th>
+                            <th>수</th>
+                            <th>목</th>
+                            <th>금</th>
+                            <th>토</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>1</td>
+                            <td>2<br><span class="event green">13:50-16:00</span></td>
+                            <td>3</td>
+                            <td>4</td>
+                          </tr>
+                          <tr>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9<br><span class="event green">13:47-16:00</span></td>
+                            <td>10</td>
+                            <td>11</td>
+                          </tr>
+                          <tr>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18<br><span class="event orange">16:50-20:00</span></td>
+                          </tr>
+                          <tr>
+                            <td>19</td>
+                            <td>20</td>
+                            <td>21</td>
+                            <td>22</td>
+                            <td>23<br><span class="event green">13:50~</span></td>
+                            <td>24</td>
+                            <td>25</td>
+                          </tr>
+                          <tr>
+                            <td>26</td>
+                            <td>27</td>
+                            <td>28</td>
+                            <td>29</td>
+                            <td>30</td>
+                            <td>31</td>
+                            <td></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </form>
+                </div>
+                <div id="tab4" class="tab">
+                  <form action="" class="student-form">
+                    <div class="form-row">
+                      <div class="title">상담형태</div>
+                      <div class="radio-group">
+                        <input type="radio" id="phone" name="counselling" value="phone" checked>
+                        <label for="phone">전화</label>
+                        <input type="radio" id="text" name="counselling" value="text">
+                        <label for="text">문자</label>
+                        <input type="radio" id="meet" name="counselling" value="meet">
+                        <label for="meet">대면</label>
+                      </div>
+                    </div>
+                    <!-- 일자 -->
+                    <div class="form-row">
+                      <label for="counsel-date">일자</label>
+                      <input type="date" id="counsel-date" name="counselDate" class="date-input">
+                      <label for="teacher-filter">상담자</label>
+                      <div class="basic-select">
+                        <select id="teacher-filter" name="teacher" class="basic-select">
+                          <option value="">선생님1</option>
+                          <option value="">선생님2</option>
+                        </select>
+                      </div>
+                    </div>
+                    <!-- 상담내용 -->
+                    <div class="form-row">
+                      <label for="consult-content">상담내용</label>
+                      <textarea id="consult-content" name="consultContent" rows="7" placeholder="상담 내용을 작성해 주세요."></textarea>
+                    </div>
+                    <!-- 이전 상담 목록 -->
+                    <div class="title">이전 상담 목록</div>
+                    <div class="table-frame">
+                      <table class="basic-table">
+                        <thead>
+                          <tr>
+                            <th>No</th>
+                            <th>일자</th>
+                            <th>형태</th>
+                            <th>상담자</th>
+                            <th>유형</th>
+                            <th>상담내용</th>
+                          </tr>
+                        </thead>
+                        <tbody id="consult-tbody">
+                          <tr>
+                            <td>1</td>
+                            <td>2015/01-28</td>
+                            <td>전화</td>
+                            <td>선생님1</td>
+                            <td>기타상담</td>
+                            <td>성적이 많이 올라서 학부모님과 월반 관련 상담을 진행함. 윗 학년 친구들과 수업이 가능할 듯하여 대기 후 매칭될 경우 한 학년을 올려서 수업을 진행.</td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>2015/01-15</td>
+                            <td>전화</td>
+                            <td>선생님1</td>
+                            <td>수업일지</td>
+                            <td>잦은 결석으로 보강 일수가 늘어서 학부모님과 상담을 진행함. 주중에 시간을 내기 힘들어 토요일 반으로 변경을 요청하심. 반이 없어서 우선 대기를 걸어둠.</td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td>2015/01-3</td>
+                            <td>전화</td>
+                            <td>선생님1</td>
+                            <td>입회 전</td>
+                            <td>호호 유치원 출신. 한자는 장원 한자 수업을 꾸준히 해 왔고 수업도 책나무 같은 논술 수업을 꾸준히 받고 있다고 함. 수업 보강용 자료 요청하셔서 드릴 수 있도록 조치함.</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script src="/js/loadHTML.js"></script>
+</body>
+</html>

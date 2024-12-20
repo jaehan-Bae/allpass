@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="/js/custom.js"></script>
+    <script src="/js/loadHTML.js"></script>
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="main-container">
+    <!-- header -->
+    <div id="header-load"></div>
+    <div class="main-frame">
+      <!-- left nav bar -->
+      <aside id="sidebar-load"></aside>
+      <main class="main-info">
+        <div class="student-frame">
+          <!-- section:left -->
+          <section class="info-summary">
+            <div class="info-title">
+              <h2>학생 정보</h2>
+              <div class="new-regist">+ 신규 등록</div>
+            </div>
+            <div class="info-filters">
+              <div class="basic-select">
+                <select name="subject" id="subject-filter">
+                  <option value="all">과목 전체</option>
+                  <option value="">영재</option>
+                  <option value="">수재</option>
+                  <option value="">신동</option>
+                  <option value="">천재</option>
+                </select>
+              </div>
+              <div class="basic-select">
+                <select name="teacher" id="teacher-filter">
+                  <option value="teacher1">김호호 선생님</option>
+                  <option value="teacher2">김호이 선생님</option>
+                  <option value="teacher3">김호삼 선생님</option>
+                </select>
+              </div>
+            </div>
+            <div class="student-search join-group">
+              <input type="text" id="student-name" name="studentName" placeholder="이름으로 검색">
+            </div>
+            <div class="time-order">
+              <div class="radio-group">
+                <input type="radio" id="institute-exist" name="instituteExist">
+                <label for="institute-exist">재원</label>
+                <input type="radio" id="institute-leave" name="instituteLeave">
+                <label for="institute-leave">퇴원</label>
+              </div>
+              <div class="basic-select time-select">
+                <select name="teacher" id="subject-filter">
+                  <option value="lately">최신 등록순</option>
+                  <option value="past">과거 등록순</option>
+                </select>
+              </div>
+            </div>
+            <div class="table-frame">
+              <table class="student-table">
+                <thead>
+                  <tr>
+                    <th>No</th>
+                    <th>이름</th>
+                    <th>학교/유치원</th>
+                    <th>학년</th>
+                    <th>수강과목</th>
+                  </tr>
+                </thead>
+                <tbody id="student-tbody">
+                  <tr>
+                    <td>1</td>
+                    <td>김호호</td>
+                    <td>호호초등학교</td>
+                    <td>초1</td>
+                    <td>초등전체, 새움, 독클</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>김호이</td>
+                    <td>호호유치원</td>
+                    <td>예비</td>
+                    <td>호호하니, 호호루키</td>
+                  </tr>                
+                  <tr>
+                    <td>3</td>
+                    <td>김호삼</td>
+                    <td>호호유치원</td>
+                    <td>예비</td>
+                    <td>호호하니, 호호루키</td>
+                  </tr>                
+                  <tr>
+                    <td>4</td>
+                    <td>김호사</td>
+                    <td>호호유치원</td>
+                    <td>예비</td>
+                    <td>호호하니, 호호루키</td>
+                  </tr>                
+                  <tr>
+                    <td>5</td>
+                    <td>김호오</td>
+                    <td>호호유치원</td>
+                    <td>예비</td>
+                    <td>호호하니, 호호루키</td>
+                  </tr>                
+                  <tr>
+                    <td>7</td>
+                    <td>김호칠</td>
+                    <td>호호유치원</td>
+                    <td>예비</td>
+                    <td>호호하니, 호호루키</td>
+                  </tr>                
+                  <tr>
+                    <td>6</td>
+                    <td>김호육</td>
+                    <td>호호유치원</td>
+                    <td>예비</td>
+                    <td>호호하니, 호호루키</td>
+                  </tr>                
+                </tbody>
+              </table>
+            </div>
+            <div class="sibling-list">
+              <h3>형제 리스트</h3>
+              <div class="table-frame">
+                <table class="sibling-table">
+                  <thead>
+                    <tr>
+                      <th>No</th>
+                      <th>이름</th>
+                      <th>학교/유치원</th>
+                      <th>학년</th>
+                      <th>수강과목</th>
+                    </tr>
+                  </thead>
+                  <tbody id="sibling-tbody">
+                    <tr>
+                      <td>1</td>
+                      <td>김호일</td>
+                      <td>호호초등학교</td>
+                      <td>초1</td>
+                      <td>초등전체, 새움, 독클</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>김호이</td>
+                      <td>호호초등학교</td>
+                      <td>초1</td>
+                      <td>초등전체, 새움, 독클</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+          
+          <!-- section:right -->
+          <section class="info-desc">
+            <div class="info-tab-inner">
+              <div class="info-tab-btn">
+                <a href="#tab1" class="active">기본정보</a>
+                <a href="#tab2">수강과목/회비</a>
+                <a href="#tab3">출결</a>
+                <a href="#tab4">상담내역</a>
+              </div>
+              <div class="info-tab-content">
+                <div id="tab1" class="tab">
+                  <form action="" class="student-form">
+                    <div class="calendar-container">
+                      <div class="calendar-header">
+                        <div class="month-navigation">
+                          <button class="arrow left">&lt;</button>
+                          <span class="current-month">2025년 1월</span>
+                          <button class="arrow right">&gt;</button>
+                        </div>
+                        <button class="today-button">오늘</button>
+                      </div>
+                      <table class="calendar-table">
+                        <thead>
+                          <tr>
+                            <th>일</th>
+                            <th>월</th>
+                            <th>화</th>
+                            <th>수</th>
+                            <th>목</th>
+                            <th>금</th>
+                            <th>토</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>1</td>
+                            <td>2<br><span class="event green">13:50-16:00</span></td>
+                            <td>3</td>
+                            <td>4</td>
+                          </tr>
+                          <tr>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9<br><span class="event green">13:47-16:00</span></td>
+                            <td>10</td>
+                            <td>11</td>
+                          </tr>
+                          <tr>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18<br><span class="event orange">16:50-20:00</span></td>
+                          </tr>
+                          <tr>
+                            <td>19</td>
+                            <td>20</td>
+                            <td>21</td>
+                            <td>22</td>
+                            <td>23<br><span class="event green">13:50~</span></td>
+                            <td>24</td>
+                            <td>25</td>
+                          </tr>
+                          <tr>
+                            <td>26</td>
+                            <td>27</td>
+                            <td>28</td>
+                            <td>29</td>
+                            <td>30</td>
+                            <td>31</td>
+                            <td></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </form>
+                </div>
+                <div id="tab2" class="tab">
+                  <div>
+                    
+                  </div>
+                </div>
+                <div id="tab3" class="tab">
+                  <div>3사자</div>
+                </div>
+                <div id="tab4" class="tab">
+                  <div>4여우</div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script src="/js/loadHTML.js"></script>
+</body>
+</html>

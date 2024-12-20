@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="/js/custom.js"></script>
+    <script src="/js/loadHTML.js"></script>
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="main-container">
+    <!-- header -->
+    <div id="header-load"></div>
+    <div class="main-frame">
+      <!-- left nav bar -->
+      <aside id="sidebar-load"></aside>
+      <main class="main-info">
+        <div class="student-frame">
+          <!-- section:consult -->
+          <section class="consult-section">
+            <div class="consult-inner">
+              <div class="consult-header">
+                <h2 class="consult-title">상담/문의 기록</h2>
+                <div class="green-button">+상담기록 추가</div>
+              </div>
+              <div class="month-navigation month-adjust">
+                <button class="arrow-left"></button>
+                <span class="current-month">2025년 1월</span>
+                <button class="arrow-right"></button>
+              </div>
+              <!-- 필터와 검색 영역 -->
+              <div class="counsel-filters">
+                <div class="select-row">
+                  <div class="left-search">
+                    <div class="basic-select">
+                      <select name="gradeFilter" id="grade-filter">
+                        <option value="all">학년 전체</option>
+                        <option value="초1">초1</option>
+                        <option value="초2">초2</option>
+                      </select>
+                    </div>
+                    <div class="student-search join-group search-adjust">
+                      <input type="text" id="student-name" name="studentName" placeholder="이름으로 검색">
+                    </div>
+                  </div>
+                  <div class="checkbox-group">
+                    <input type="checkbox" id="schedule" name="classStatus"> <label for="checkbox">수업확정</label>
+                    <input type="checkbox" id="waiting" name="classStatus"> <label for="waiting">수업대기</label>
+                    <input type="checkbox" id="ongoing" name="classStatus"> <label for="ongoing">상담진행</label>
+                    <input type="checkbox" id="completed" name="classStatus"> <label for="completed">종료</label>
+                  </div>
+                </div>
+              </div>
+              <div class="table-frame counsel-write">
+                <table class="basic-table">
+                  <thead>
+                    <tr>
+                      <th class="checkbox-group">
+                        <input type="checkbox" id="" name="">
+                      </th>
+                      <th>일자</th>
+                      <th>이름</th>
+                      <th>학교</th>
+                      <th>학년</th>
+                      <th>연락처</th>
+                      <th>유입경로</th>
+                      <th>메모사항</th>
+                      <th>진행상황</th>
+                      <th>입회일/폼 발송</th>
+                    </tr>
+                  </thead>
+                  <tbody id="">
+                    <tr>
+                      <td class="checkbox-group">
+                        <input type="checkbox" id="" name="">
+                      </td>
+                      <td>2025.01.13.16:50</td>
+                      <td>김호호</td>
+                      <td>호호초등학교</td>
+                      <td>7세</td>
+                      <td>010-0000-0000</td>
+                      <td>인스타그램</td>
+                      <td>7세 수업 문의. 간단하게 수업진행 안내드림. 현재 수업 진행 중인 반이 없어서 알겠다고 하고 끊으셨음.</td>
+                      <td class="basic-select">
+                        <select name="progressUpdate" id="progress-update">
+                          <option value="confirm">수업확정</option>
+                          <option value="standby">수업대기</option>
+                          <option value="progress">상담진행</option>
+                          <option value="close">종료</option>
+                        </select>
+                      </td>
+                      <td>
+                        <input type="date" id="" name="" class="date-input">
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="checkbox-group">
+                        <input type="checkbox" id="" name="">
+                      </td>
+                      <td>2025.01.13.16:50</td>
+                      <td>김호호</td>
+                      <td>호호초등학교</td>
+                      <td>7세</td>
+                      <td>010-0000-0000</td>
+                      <td>인스타그램</td>
+                      <td>7세 수업 문의. 간단하게 수업진행 안내드림. 현재 수업 진행 중인 반이 없어서 알겠다고 하고 끊으셨음.</td>
+                      <td class="basic-select">
+                        <select name="progressUpdate" id="progress-update">
+                          <option value="confirm">수업확정</option>
+                          <option value="standby">수업대기</option>
+                          <option value="progress">상담진행</option>
+                          <option value="close">종료</option>
+                        </select>
+                      </td>
+                      <td>
+                        <div class="join-btn">회원가입 발송</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="checkbox-group">
+                        <input type="checkbox" id="" name="">
+                      </td>
+                      <td>2025.01.13.16:50</td>
+                      <td>김호호</td>
+                      <td>호호초등학교</td>
+                      <td>7세</td>
+                      <td>010-0000-0000</td>
+                      <td>인스타그램</td>
+                      <td>7세 수업 문의. 간단하게 수업진행 안내드림. 현재 수업 진행 중인 반이 없어서 알겠다고 하고 끊으셨음.</td>
+                      <td class="basic-select">
+                        <select name="progressUpdate" id="progress-update">
+                          <option value="confirm">수업확정</option>
+                          <option value="standby">수업대기</option>
+                          <option value="progress">상담진행</option>
+                          <option value="close">종료</option>
+                        </select>
+                      </td>
+                      <td>
+                        <div class="join-btn"></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="checkbox-group">
+                        <input type="checkbox" id="" name="">
+                      </td>
+                      <td>2025.01.13.16:50</td>
+                      <td>김호호</td>
+                      <td>호호초등학교</td>
+                      <td>7세</td>
+                      <td>010-0000-0000</td>
+                      <td>인스타그램</td>
+                      <td>7세 수업 문의. 간단하게 수업진행 안내드림. 현재 수업 진행 중인 반이 없어서 알겠다고 하고 끊으셨음.</td>
+                      <td class="basic-select">
+                        <select name="progressUpdate" id="progress-update">
+                          <option value="confirm">수업확정</option>
+                          <option value="standby">수업대기</option>
+                          <option value="progress">상담진행</option>
+                          <option value="close">종료</option>
+                        </select>
+                      </td>
+                      <td>
+                        <div class="join-btn"></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="checkbox-group">
+                        <input type="checkbox" id="" name="">
+                      </td>
+                      <td>2025.01.13.16:50</td>
+                      <td>김호호</td>
+                      <td>호호초등학교</td>
+                      <td>7세</td>
+                      <td>010-0000-0000</td>
+                      <td>인스타그램</td>
+                      <td>7세 수업 문의. 간단하게 수업진행 안내드림. 현재 수업 진행 중인 반이 없어서 알겠다고 하고 끊으셨음.</td>
+                      <td class="basic-select">
+                        <select name="progressUpdate" id="progress-update">
+                          <option value="confirm">수업확정</option>
+                          <option value="standby">수업대기</option>
+                          <option value="progress">상담진행</option>
+                          <option value="close">종료</option>
+                        </select>
+                      </td>
+                      <td>
+                        <div class="join-btn"></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="checkbox-group">
+                        <input type="checkbox" id="" name="">
+                      </td>
+                      <td>2025.01.13.16:50</td>
+                      <td>김호호</td>
+                      <td>호호초등학교</td>
+                      <td>7세</td>
+                      <td>010-0000-0000</td>
+                      <td>인스타그램</td>
+                      <td>7세 수업 문의. 간단하게 수업진행 안내드림. 현재 수업 진행 중인 반이 없어서 알겠다고 하고 끊으셨음.</td>
+                      <td class="basic-select">
+                        <select name="progressUpdate" id="progress-update">
+                          <option value="confirm">수업확정</option>
+                          <option value="standby">수업대기</option>
+                          <option value="progress">상담진행</option>
+                          <option value="close">종료</option>
+                        </select>
+                      </td>
+                      <td>
+                        <div class="join-btn"></div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script src="/js/loadHTML.js"></script>
+</body>
+</html>
