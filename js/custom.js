@@ -7,6 +7,7 @@ $(function(){
     $(this).addClass('active');
     $(this).siblings('.info-tab-btn a').removeClass('active');
   });
+
   $('.counsel-button').click(function() {
     $('.modal').fadeIn()
   });
