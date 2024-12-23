@@ -134,7 +134,8 @@ input[type="text"]:focus {
 .radio-group input[type="radio"] {
   border-radius: 50%;
 }
-.checkbox-group input[type="checkbox"] {
+.checkbox-group input[type="checkbox"],
+.manage-table input[type="checkbox"] {
   border-radius: 20%;
 }
 .radio-group input[type="radio"],
@@ -201,7 +202,24 @@ table .checkbox-group {
 .arrow-right::after {
   content: "\e93e";
 }
-
+/* common title */
+.common-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.common-title h2 {
+  font-size: 20px;
+  font-weight: 500;
+}
+.manage-table-frame {
+  margin-top: 50px;
+}
+.small-title {
+  font-weight: 500;
+  margin: 10px 0px;
+}
 /* ======================= login page ======================= */
 .login-container {
   display: flex;
@@ -234,8 +252,10 @@ input[type="password"] {
   border-radius: 5px;
   outline: none;
   box-sizing: border-box;
-  margin-bottom: 20px;
   background: #EEF3FF;
+}
+#login-form > input[type="text"] {
+  margin-bottom: 20px;
 }
 #login-form > input[type="text"]:focus,
 input[type="password"]:focus,
@@ -248,7 +268,7 @@ input[type="password"]:focus,
   color: #525252;
   display: flex;
   justify-content: flex-start;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
   align-items: center;
 }
 .checkbox-group label {
@@ -272,7 +292,8 @@ input[type="checkbox"]:checked {
   border-color: #334DD7;
 }
 input[type="checkbox"]:checked::after {
-  content: '✔';
+  content: "\e928";
+  font-family: xeicon;
   font-size: 12px;
   color: #fff;
   position: absolute;
@@ -610,6 +631,9 @@ canvas {
   color: #7C7C7C;
   margin-top: 20px;
   margin-bottom: 80px;
+}
+.join-frame {
+  margin: 20px 0px 30px 0px;
 }
 .phone-inputs {
   display: flex;
@@ -977,23 +1001,19 @@ canvas {
 .info-desc {
   flex: 5;
 }
-.info-title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 15px;
-}
-.info-title h2 {
-  font-size: 22px;
-  font-weight: 400;
+.common-button-frame {
+  text-align: right;
+  margin-bottom: 20px;
 }
 .new-regist,
-.green-button {
+.common-button {
   background: #01A53C;
   padding: 5px 18px;
   border-radius: 20px;
   color: #fff;
   cursor: pointer;
+  display: inline-flex;
+  margin-left: auto;
 }
 .table-frame {
   border-radius: 10px;
@@ -1170,15 +1190,20 @@ tbody tr:hover:not(.calendar-table tr) {
   color: #aaa;
   margin-top: 30px;
 }
+.student-btn {
+  margin-top: 50px;
+}
+.save-btn-frame {
+  text-align: center;
+}
 .save-btn {
-  background: #334DD7;
   padding: 13px 50px;
+  background: #334DD7;
   border: none;
   border-radius: 30px;
   color: #fff;
   margin: auto;
   display: inline-block;
-  margin-top: 50px;
 }
 #tab2 .save-btn {
   margin-top: 0px;
@@ -1368,6 +1393,7 @@ tbody tr:hover:not(.calendar-table tr) {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 50px;
 }
 .select-row .basic-select {
   width: 200px;
@@ -1425,13 +1451,19 @@ tbody tr:hover:not(.calendar-table tr) {
   left: 0;
   width: 100%;
   height: 100vh;
-  display: none;
+  /* display: none; */
+}
+.consel-modal {
+  height: 500px;
+  width: 900px;
+}
+.delete-modal {
+  width: 500px;
+  height: 300px;
 }
 .modal-content {
   background-color: #fff;
-  width: 900px;
   border-radius: 10px;
-  height: 500px;
   position: absolute;
   transform: translate(-50%,-50%);
   top: 50%;
@@ -1455,4 +1487,76 @@ tbody tr:hover:not(.calendar-table tr) {
   font-family: xeicon;
   color: rgb(176, 175, 175);
   font-size: 20px;
+}
+
+/* ======================= teacher-manage page ======================= */
+.manage-frame {
+  width: 80%;
+  display: flex;
+}
+.manager-list {
+  flex: 5;
+}
+.manager-info {
+  flex: 4.5;
+}
+.manager-list-frame {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.manager-list .common-title {
+  margin-bottom: 0px;
+}
+.common-button {
+  background: #40C5D7;
+}
+.mamage-table-frame table {
+  table-layout: fixed;
+  width: 100%;
+}
+.check-delete {
+  color: #E27825;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+.check-delete::before {
+  content: "\f1f8";
+  font-family: fontawesome;
+}
+.authorization {
+  color: gray;
+  font-size: 14px;
+  margin-top: auto;
+}
+
+.manage-table th:first-child, 
+.manage-table th:nth-child(2) {
+  border-right: 1px solid #DCE4F5;
+}
+/* .manage-table th:first-child,
+.manage-table td:first-child,
+.manage-table th:nth-child(2),
+.manage-table td:nth-child(2) {
+  border-right: 1px solid lightgray;
+} */
+.manage-table table {
+  border-spacing: 0;
+  table-layout: fixed;
+}
+.manage-table td[rowspan] {
+  border-right: 1px solid #DCE4F5;
+  position: relative;
+}
+.manage-table tr:hover {
+  background: none !important;
+}
+.manager-info .form-row {
+  margin-bottom: 20px;
+  align-items: start;
+}
+.manager-row .basic-input {
+  flex: 2;
+  max-width: 300px;
 }
