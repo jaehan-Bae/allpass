@@ -26,13 +26,13 @@
                 <h2>관리자 목록</h2>
               </div>
               <div class="common-button-frame">
-                <div class="common-button">+관리자 추가</div>
+                <div class="common-button add-manager">+관리자 추가</div>
               </div>
               <div class="table-frame mamage-table-frame">
                 <table class="basic-table">
                   <thead>
                     <tr>
-                      <th class="checkbox-group">
+                      <th class="normal-checkbox">
                         <input type="checkbox" id="" name="">
                       </th>
                       <th>구분</th>
@@ -44,7 +44,7 @@
                   </thead>
                   <tbody id="">
                     <tr>
-                      <td class="checkbox-group">
+                      <td class="normal-checkbox">
                         <input type="checkbox" id="" name="">
                       </td>
                       <td>운영자</td>
@@ -54,7 +54,7 @@
                       <td>사용</td>
                     </tr>
                     <tr>
-                      <td class="checkbox-group">
+                      <td class="normal-checkbox">
                         <input type="checkbox" id="" name="">
                       </td>
                       <td>운영자</td>
@@ -64,7 +64,7 @@
                       <td>사용</td>
                     </tr>
                     <tr>
-                      <td class="checkbox-group">
+                      <td class="normal-checkbox">
                         <input type="checkbox" id="" name="">
                       </td>
                       <td>운영자</td>
@@ -74,7 +74,7 @@
                       <td>사용</td>
                     </tr>
                     <tr>
-                      <td class="checkbox-group">
+                      <td class="normal-checkbox">
                         <input type="checkbox" id="" name="">
                       </td>
                       <td>운영자</td>
@@ -84,7 +84,7 @@
                       <td>사용</td>
                     </tr>
                     <tr>
-                      <td class="checkbox-group">
+                      <td class="normal-checkbox">
                         <input type="checkbox" id="" name="">
                       </td>
                       <td>운영자</td>
@@ -94,7 +94,7 @@
                       <td>미사용</td>
                     </tr>
                     <tr>
-                      <td class="checkbox-group">
+                      <td class="normal-checkbox">
                         <input type="checkbox" id="" name="">
                       </td>
                       <td>운영자</td>
@@ -104,7 +104,7 @@
                       <td>사용</td>
                     </tr>
                     <tr>
-                      <td class="checkbox-group">
+                      <td class="normal-checkbox">
                         <input type="checkbox" id="" name="">
                       </td>
                       <td>운영자</td>
@@ -133,7 +133,7 @@
             </div>
             <div class="form-row">
               <label>구분</label>
-              <div class="radio-group">
+              <div class="normal-radio">
                 <input type="radio" name="manage" id="manager" checked>
                 <label for="manager">관리자</label>
                 <input type="radio" name="manage" id="teacher">
@@ -142,7 +142,7 @@
             </div>
             <div class="form-row">
               <label>사용여부</label>
-              <div class="radio-group">
+              <div class="normal-radio">
                 <input type="radio" name="availability" id="in-use" checked>
                 <label for="in-use">사용중</label>
                 <input type="radio" name="availability" id="un-used">
@@ -151,21 +151,21 @@
             </div>
             <div class="form-row manager-row">
               <label for="manager-name">이름</label>
-              <input type="text" id="manager-name" name="manangerName" class="basic-input" placeholder="이름을 입력해주세요">
+              <input type="text" id="manager-name" name="manangerName" class="normal-input" placeholder="이름을 입력해주세요">
             </div>
             <div class="form-row manager-row">
               <label for="manager-id">아이디</label>
-              <input type="text" id="manager-id" name="managerId" class="basic-input" placeholder="아이디를 입력해주세요">
+              <input type="text" id="manager-id" name="managerId" class="normal-input" placeholder="아이디를 입력해주세요">
             </div>
             <div class="form-row manager-row">
               <label for="manager-password">비밀번호</label>
-              <input type="password" id="manager-password" name="managerPassword" class="basic-input" placeholder="비밀번호를 입력해주세요">
+              <input type="password" id="manager-password" name="managerPassword" class="normal-input" placeholder="비밀번호를 입력해주세요">
             </div>
             <div class="form-row">
               <label>수업종류</label>
-              <div class="checkbox-group">
+              <div class="normal-checkbox">
                 <input type="checkbox" name="classType" id="word" checked>
-                <label for="word" style="width: auto;">어휘빌더/하이리더</label>
+                <label for="word" style="width: auto; margin-right: 10px;">어휘빌더/하이리더</label>
                 <input type="checkbox" name="classType" id="reading">
                 <label for="reading">독·클</label>
               </div>
@@ -275,18 +275,76 @@
     </div>
   </div>
 
-  <div class="modal">
-    <div class="modal-content delete-modal">
-      <div class="modal-header">
+  <div class="modal delete-modal">
+    <div class="modal-content delete-modal-content">
+      <div class="modal-header line-modal-header">
         <h2>
           항목 삭제
         </h2>
         <a href="#" class="btn-close"></a>
       </div>
-      <hr>
-      <p>'운영자'또는 사용여부가 '사용중'인 경우에는 삭제가 불가능합니다.</p>
-      <button type="submit" class="save-btn">저장하기</button>
-
+      <hr class="modal-line"></hr>
+      <div class="modal-notice">
+        <p>'운영자'또는 사용여부가 '사용중'인 경우에는<br>
+            삭제가 불가능합니다.</p>
+      </div>
+      <div class="save-btn-frame">
+        <button type="submit" class="save-btn">저장하기</button>
+      </div>
+    </div>
+  </div>
+  <div class="modal manager-modal">
+    <div class="modal-content manager-modal-content">
+      <div class="modal-header line-modal-header">
+        <h2>
+          관리자 추가
+        </h2>
+        <a href="#" class="btn-close"></a>
+      </div>
+      <hr class="modal-line"></hr>
+      <div class="modal-notice">
+        <div>
+          <div class="form-row manager-row">
+            <label>구분</label>
+            <div class="normal-radio">
+              <input type="radio" name="manage" id="manager" checked>
+              <label for="manager">관리자</label>
+              <input type="radio" name="manage" id="teacher">
+              <label for="teacher">선생님</label>
+            </div>
+          </div>
+          <div class="form-row manager-row">
+            <label>사용여부</label>
+            <div class="normal-radio">
+              <input type="radio" name="availability" id="in-use" checked>
+              <label for="in-use">사용중</label>
+              <input type="radio" name="availability" id="un-used">
+              <label for="un-used">미사용</label>
+            </div>
+          </div>
+          <div class="form-row manager-row">
+            <label for="manager-name">이름</label>
+            <input type="text" id="manager-name" name="manangerName" class="normal-input" placeholder="이름을 입력해주세요">
+          </div>
+          <div class="form-row manager-row">
+            <label for="manager-id">아이디</label>
+            <input type="text" id="manager-id" name="managerId" class="normal-input" placeholder="아이디를 입력해주세요">
+          </div>
+          <div class="form-row manager-row">
+            <label for="manager-password">비밀번호</label>
+            <input type="password" id="manager-password" name="managerPassword" class="normal-input" placeholder="비밀번호를 입력해주세요">
+          </div>
+          <div class="normal-checkbox">
+            <input type="checkbox" name="classType" id="word" checked>
+            <label for="word" style="width: auto; margin-right: 10px;">어휘빌더/하이리더</label>
+            <input type="checkbox" name="classType" id="reading">
+            <label for="reading">독·클</label>
+          </div>
+        </div>
+      </div>
+      <div class="save-btn-frame">
+        <button type="submit" class="save-btn">저장하기</button>
+      </div>
     </div>
   </div>
   <script src="/js/loadHTML.js"></script>

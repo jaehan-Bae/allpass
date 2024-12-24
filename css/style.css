@@ -98,11 +98,16 @@ input[type="text"]:focus {
 .basic-input,
 .basic-select select,
 .date-input {
+  border-radius: 5px;
+  background: #EEF3FF;
+}
+.normal-input,
+.basic-input,
+.basic-select select,
+.date-input {
   appearance: none;
   background-size: 16px;
   border: 1px solid #D1DCF4;
-  background: #EEF3FF;
-  border-radius: 5px;
   padding: 8px 10px;
   height: 30px;
   width: 100%;
@@ -116,7 +121,6 @@ input[type="text"]:focus {
 }
 .basic-select {
   position: relative;
-  /* display: inline-block; */
 }
 .basic-select::after {
   content: "\e943";
@@ -130,6 +134,18 @@ input[type="text"]:focus {
   font-weight: bold;
   font-size: 14px;
 }
+/* normal checkbox custom */
+.normal-checkbox {
+  display: flex;
+  align-items: center;
+}
+.normal-checkbox input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #BABABB;
+  background-color: white;
+  border-radius: 0%;
+}
 /* radio custom */
 .radio-group input[type="radio"] {
   border-radius: 50%;
@@ -138,12 +154,18 @@ input[type="text"]:focus {
 .manage-table input[type="checkbox"] {
   border-radius: 20%;
 }
-.radio-group input[type="radio"],
-.checkbox-group input[type="checkbox"] {
-  cursor: pointer;
+/* .input[type="radio"],
+input[type="checkbox"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+} */
+.radio-group input[type="radio"],
+.checkbox-group input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
   width: 18px;
   height: 18px;
   position: relative;
@@ -153,7 +175,8 @@ input[type="text"]:focus {
   vertical-align: middle;
 }
 .radio-group,
-.checkbox-group {
+.checkbox-group,
+.normal-checkbox {
   display: flex;
   align-items: center;
 }
@@ -174,8 +197,16 @@ input[type="text"]:focus {
   transform: translate(-50%,-50%);
   border: transparent;
 }
+/* normal radio */
+.normal-radio input[type="radio"] {
+  transform: scale(1.3);
+  margin: 0px 5px;
+  border: 1px solid #DCE4F5;
+  cursor: pointer;
+}
 /* table in checkbox-group */
-table .checkbox-group {
+table .checkbox-group,
+table .normal-checkbox {
   margin: 0;
   display: block;
 }
@@ -244,7 +275,7 @@ table .checkbox-group {
   color: #65688b;
 }
 #login-form > input[type="text"],
-input[type="password"] {
+#login-form > input[type="password"] {
   width: 100%;
   padding: 15px;
   font-size: 14px;
@@ -277,9 +308,6 @@ input[type="password"]:focus,
 .join-group input[type="checkbox"],
 input[type="checkbox"] {
   cursor: pointer;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
   width: 16px;
   height: 16px;
   border: 1px solid #525252;
@@ -300,6 +328,10 @@ input[type="checkbox"]:checked::after {
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
+}
+/* normal-checkbox */
+.normal-checkbox {
+  border-radius: 0%;
 }
 .login-button {
   width: 100%;
@@ -982,7 +1014,8 @@ canvas {
 }
 
 /* ======================= student-info page ======================= */
-.student-frame {
+.student-frame,
+.thrid-frame {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1056,6 +1089,20 @@ canvas {
   text-align: center;
   border: 1px solid #DCE4F5;
   line-height: 3rem;
+}
+.content-table {
+  padding: 15px;
+}
+.content-table tr {
+  line-height: 1.6rem;
+}
+.content-table tr td:last-child {
+  width: 50%;
+  text-align-last: left;
+}
+.content-table th,
+.content-table td {
+  padding: 15px;
 }
 /* .basic-table,  */
 .student-search {
@@ -1156,6 +1203,7 @@ tbody tr:hover:not(.calendar-table tr) {
   /* display: inline-block; */
   width: 80px;
 }
+.form-row .normal-input,
 .form-row .basic-input,
 .form-row .basic-select,
 .form-row .radio-group,
@@ -1442,6 +1490,9 @@ tbody tr:hover:not(.calendar-table tr) {
 .counsel-write .date-input {
   width: 60%;
 }
+#consult-content {
+  margin-bottom: 15px;
+}
 /* modal */
 .modal {
   position: fixed;
@@ -1451,15 +1502,31 @@ tbody tr:hover:not(.calendar-table tr) {
   left: 0;
   width: 100%;
   height: 100vh;
-  /* display: none; */
+  display: none;
 }
 .consel-modal {
   height: 500px;
   width: 900px;
 }
-.delete-modal {
-  width: 500px;
-  height: 300px;
+.delete-modal-content {
+  width: 450px;
+  height: 250px;
+}
+.manager-modal-content {
+  width: 600px;
+  height: 430px;
+}
+.manager-modal-content .form-row:first-child {
+  margin-top: 0;
+}
+.manager-modal .modal-notice {
+  text-align: left;
+  width: 100%;
+}
+.manager-modal .modal-notice > div {
+  width: 70%;
+  font-size: 15px;
+  margin: 20px 0px;
 }
 .modal-content {
   background-color: #fff;
@@ -1471,11 +1538,32 @@ tbody tr:hover:not(.calendar-table tr) {
   padding: 40px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
 }
+.modal-line {
+  border: none;
+  border-top: 1px solid lightgray;
+}
 .modal-header {
   display: flex;
   align-items: center;
   margin-bottom: 40px;
   justify-content: space-between;
+}
+.delete-modal-content,
+.manager-modal-content {
+  padding: 10px;
+}
+.line-modal-header {
+  margin-bottom: 10px;
+}
+.delete-modal-content .modal-notice p {
+  padding: 20px 0px;
+  font-size: 17px;
+}
+.manager-modal .modal-notice {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: left;
 }
 .modal-header h2 {
   font-size: 20px;
@@ -1488,7 +1576,10 @@ tbody tr:hover:not(.calendar-table tr) {
   color: rgb(176, 175, 175);
   font-size: 20px;
 }
-
+.modal-notice {
+  text-align: center;
+  padding: 20px 0px;
+}
 /* ======================= teacher-manage page ======================= */
 .manage-frame {
   width: 80%;
@@ -1520,6 +1611,7 @@ tbody tr:hover:not(.calendar-table tr) {
   font-size: 14px;
   font-weight: 500;
   margin-top: 10px;
+  cursor: pointer;
 }
 .check-delete::before {
   content: "\f1f8";
@@ -1535,12 +1627,6 @@ tbody tr:hover:not(.calendar-table tr) {
 .manage-table th:nth-child(2) {
   border-right: 1px solid #DCE4F5;
 }
-/* .manage-table th:first-child,
-.manage-table td:first-child,
-.manage-table th:nth-child(2),
-.manage-table td:nth-child(2) {
-  border-right: 1px solid lightgray;
-} */
 .manage-table table {
   border-spacing: 0;
   table-layout: fixed;
@@ -1556,7 +1642,66 @@ tbody tr:hover:not(.calendar-table tr) {
   margin-bottom: 20px;
   align-items: start;
 }
-.manager-row .basic-input {
+.manager-row {
+  margin-bottom: 15px;
+}
+.manager-row .normal-input {
   flex: 2;
   max-width: 300px;
+}
+
+/* ======================= student-inout page ======================= */
+.move-summary,
+.move-reason,
+.move-list {
+  height: 100%;
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+}
+.move-summary {
+  flex: 2;
+}
+.move-desc {
+  flex: 5;
+  gap: 20px;
+}
+.move-desc {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.move-reason {
+  flex: 3;
+}
+.move-list {
+  flex: 7;
+}
+.move-reason-frame,
+.move-list-frame {
+  width: 70%;
+}
+.move-table-frame {
+  max-height: 60vh;
+}
+.blank-adjust {
+  padding-top: 20px;
+}
+.move-table tr {
+  line-height: 1.6rem;
+}
+.move-table th,
+.move-table td,
+.move-list .content-table th,
+.move-list .content-table td {
+  padding: 8px;
+}
+.basic-table tr:nth-child(even) {
+  background-color: #FBFCFF;
+}
+.move-list .content-table td:last-child {
+  width: 35%;
+}
+.move-list .month-adjust {
+  margin: 15px;
 }

@@ -8,6 +8,7 @@ $(function(){
     $(this).siblings('.info-tab-btn a').removeClass('active');
   });
 
+  // modal
   $('.counsel-button').click(function() {
     $('.modal').fadeIn()
   });
@@ -18,5 +19,13 @@ $(function(){
     if ($(event.target).is('.modal')) {
       $('.modal').fadeOut();
     }
+  });
+// delete modal
+  $('.check-delete').click(function() {
+    $('.delete-modal').fadeIn()
+  });
+  // add manager modal
+  $('.add-manager').click(function() {
+    $('.manager-modal').fadeIn()
   });
 })
