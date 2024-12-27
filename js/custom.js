@@ -28,4 +28,18 @@ $(function(){
   $('.add-manager').click(function() {
     $('.manager-modal').fadeIn()
   });
+  // class-timetable tab
+  const buttons = document.querySelectorAll('.time-tab-button');
+  const contents = document.querySelectorAll('.time-tab-content');
+  
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      buttons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+      contents.forEach(content => content.classList.remove('active'));
+      const tab = button.getAttribute('data-tab');
+      document.getElementById(tab).classList.add('active');
+    });
+  });
+  
 })

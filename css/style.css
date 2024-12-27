@@ -1214,7 +1214,7 @@ tbody tr:hover:not(.calendar-table tr) {
   min-width: 0;
 }
 .form-row:first-child {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 .form-full {
   display: flex;
@@ -1502,7 +1502,7 @@ tbody tr:hover:not(.calendar-table tr) {
   left: 0;
   width: 100%;
   height: 100vh;
-  display: none;
+  /* display: none; */
 }
 .consel-modal {
   height: 500px;
@@ -1549,8 +1549,9 @@ tbody tr:hover:not(.calendar-table tr) {
   justify-content: space-between;
 }
 .delete-modal-content,
-.manager-modal-content {
-  padding: 10px;
+.manager-modal-content,
+.time-change-modal-content {
+  padding: 15px;
 }
 .line-modal-header {
   margin-bottom: 10px;
@@ -1566,7 +1567,8 @@ tbody tr:hover:not(.calendar-table tr) {
   text-align: left;
 }
 .modal-header h2 {
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: 500;
 }
 .btn-close:after {
   /* content: "\f00d";
@@ -1595,6 +1597,10 @@ tbody tr:hover:not(.calendar-table tr) {
   display: flex;
   flex-direction: column;
   height: 100%;
+  width: 100%;
+}
+.time-table-list .month-adjust {
+  margin: 0px 0px 20px 0px;
 }
 .manager-list .common-title {
   margin-bottom: 0px;
@@ -1651,6 +1657,7 @@ tbody tr:hover:not(.calendar-table tr) {
 }
 
 /* ======================= student-inout page ======================= */
+.common-section,
 .move-summary,
 .move-reason,
 .move-list {
@@ -1704,4 +1711,355 @@ tbody tr:hover:not(.calendar-table tr) {
 }
 .move-list .month-adjust {
   margin: 15px;
+}
+.move-calendar-frame {
+  max-height: 300px;
+}
+
+/* ======================= student-out page ======================= */
+.student-out-inner {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.student-num-frame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  gap: 15px;
+}
+.student-common-box {
+  border: 1px solid transparent;
+  width: 250px;
+  height: 70px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #fff;
+  font-size: 14px;
+}
+.student-common-box span {
+  font-size: 40px;
+  font-weight: bold;
+}
+.student-common-box:nth-child(1) {
+  background: #02A7AF;
+  border: 1px solid #00787E;
+}
+.student-common-box:nth-child(2) {
+  background: #E05F55;
+  border: 1px solid #BC3F36;
+}
+.student-common-box:nth-child(3) {
+  background: #1FAC52;
+  border: 1px solid #128A3E;
+}
+.student-common-box:nth-child(4) {
+  background: #6B91EA;
+  border: 1px solid #2B5DD0;
+}
+.entry-list-frame {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+.entry-table {
+  table-layout: fixed;
+}
+.entry-table tr,
+.entry-table td {
+  /* padding: 0px 10px; */
+}
+.cancel-enroll,
+.restore-enroll {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-top: 10px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.cancel-enroll {
+  color: #E16258;
+}
+.restore-enroll {
+  color: #2273BF;
+}
+.cancel-enroll img,
+.restore-enroll img {
+  margin-right: 5px;
+}
+.delete-student {
+  display: flex;
+  justify-content: flex-end;
+}
+.delete-student-btn {
+  font-size: 14px;
+  border: 1px solid #807F7F;
+  color: #807F7F;
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: .3s ease;
+}
+.delete-student-btn:hover {
+  background-color: #807F7F;
+  color: #fff;
+}
+
+/* ======================= class-timetalbe page ======================= */
+
+.time-table-frame {
+  display: inline-block;
+  border: 2px solid #DFE6F7;
+  border-radius: 10px;
+  margin-top: 15px;
+  max-height: 70%;
+}
+.time-frame {
+  width: 85%;
+}
+.time-table-index {
+  display: flex;
+  flex: 5;
+}
+.time-name-list {
+  flex: 2;
+}
+.calendar-overview {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 13px;
+}
+.prev-month-btn,
+.schedule-info-btn {
+  border-radius: 20px;
+  color: #fff;
+  cursor: pointer;
+  padding: 5px 18px;
+}
+.prev-month-btn {
+  background-color: #02A7AF;
+}
+.schedule-info-btn {
+  background-color: #E05F55;
+}
+.time-tab-menu {
+  display: flex;
+  border: 2px solid #DFE6F7;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.time-tab-menu button {
+  flex: 1;
+  padding: 10px 0;
+  background: #fff;
+  border: #5A7CE2;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  transition: background 0.3s;
+  font-weight: bold;
+  color: #5A7CE2;
+  border-right: 2px solid #DFE6F7;
+}
+.time-tab-menu button:last-child {
+  border: none;
+}
+.time-tab-menu button.active {
+  background: #5A7CE2;
+  color: white;
+}
+.time-tab-content {
+  display: none;
+}
+.time-tab-content.active {
+  display: block;
+}
+.time-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-style: hidden;
+  background-color: white;
+  color: #8C9BBD;
+  font-size: 14px;
+}
+.time-table tr {
+  border: #DFE6F7;
+}
+.time-table th, 
+.time-table td {
+  border: 2px solid #DFE6F7;
+  padding: 10px;
+  text-align: center;
+}
+.time-table th {
+  background-color: #F7F9FF;
+  font-weight: bold;
+}
+.time-table th:nth-child(1) {
+  width: 5;
+}
+.time-table th:nth-child(2) {
+  width: 15%;
+}
+.time-table th:nth-child(3) {
+  width: 19%;
+}
+.time-table th:nth-child(4) {
+  width: 50%;
+}
+.time-table th:nth-child(5) {
+  width: 10%;
+}
+.time-table tbody tr td:not(:nth-child(4)) {
+  background-color: #F7F9FF;
+}
+.time-chocie-table {
+  max-height: 60vh;
+}
+.manager-list-frame .month-adjust {
+  margin: 10px 0;
+}
+.time-chocie-table-frame {
+  max-height: 70vh;
+}
+.time-chocie-table-frame label {
+  margin-right: 10px;
+}
+.time-chocie-table-frame label:last-child {
+  margin: 0px;
+}
+.time-chocie-table-frame > table {
+  line-height: 1.6em;
+}
+.time-chocie-table-frame > table td:first-child {
+  font-weight: 600;
+}
+.badge-han, .badge-book {
+  padding: 0px 3px;
+  border-radius: 5px;
+  color: #fff;
+  margin-right: 5px;
+}
+.badge-han {
+  background: #F33E8F;
+}
+.badge-book {
+  background: #0F95BC;
+}
+.badge-name {
+  padding: 2px 6px;
+  border-radius: 5px;
+  background: #EBEEF6;
+  color: #222;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+}
+.badge-name:after {
+  content: "\e921";
+  font-family: xeicon;
+  font-weight: bold;
+  color: #B1BAD8;
+  margin-left: 4px;
+}
+.badge-week {
+  color: #17AAB2;
+}
+.student-badge {
+  display: inline-block;
+  margin-right: 10px;
+  margin: 2px 10px;
+}
+/* class-timetable modal */
+.modal-frame {
+  height: 80vh;
+  width: 90%;
+  margin: auto;
+}
+.time-change-modal-content {
+  width: 900px;
+  height: 750px;
+}
+.icon-text-frame {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.blackboard-icon {
+  width: 32px;
+  height: 32px;
+  background: #DCE4F8;
+  padding: 10px;
+  border-radius: 50%;
+  position: relative;
+}
+.blackboard-icon img {
+  width: 16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.time-adjust-table th:nth-child(1) {
+  width: 7%;
+}
+.time-adjust-table th:nth-child(2) {
+  width: 7%;
+}
+.time-adjust-table th:nth-child(3) {
+  width: 15%;
+}
+.time-adjust-table th:nth-child(4) {
+  width: 15%;
+}
+.time-adjust-table th:nth-child(5) {
+  width: 15%;
+}
+.time-adjust-table th:nth-child(6) {
+  width: 15%;
+}
+.time-adjust-table th:nth-child(7) {
+  width: 15%;
+}
+/* .time-adjust-table tbody tr td:nth-of-type(5),
+.time-adjust-table tbody tr td:nth-of-type(6),
+.time-adjust-table tbody tr td:nth-of-type(7) {
+  background-color: #fff;
+} */
+/* .time-adjust-table tr td:nth-of-type(3),
+.time-adjust-table tr td:nth-of-type(4),
+.time-adjust-table tr td:nth-of-type(5),
+.time-adjust-table tr td:nth-of-type(6),
+.time-adjust-table tr td:nth-of-type(7) {
+  border: none;
+} */
+.time-adjust-table tr td:nth-child(4) {
+  border-right: 2px solid #DFE6F7;
+  background: #F7F9FF;
+}
+input[type="time" i] {
+  border: none;
+  background: #F7F9FF;
+  font-family: "Arial", sans-serif;
+  color: #333;
+}
+/* select placeholder */
+/* select option[disabled] {
+  opacity: 0.6;
+} */
+/* .subjects,
+.coursebook,
+.schoolyear {
+  background: #fff;
+} */
+.time-change-modal-content .save-btn {
+  margin-top: 30px;
 }

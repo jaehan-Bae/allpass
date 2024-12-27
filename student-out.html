@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="/js/custom.js"></script>
+    <script src="/js/loadHTML.js"></script>
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="main-container">
+    <!-- header -->
+    <div id="header-load"></div>
+    <div class="main-frame">
+      <!-- left nav bar -->
+      <aside id="sidebar-load"></aside>
+      <main class="main-info">
+        <!-- section:left -->
+        <section class="common-section">
+          <div class="common-title">
+            <h2>입·탈퇴 관리</h2>
+          </div>
+          <div class="student-out-inner">
+            <div>
+              <div class="student-out-calender">
+                <div class="month-navigation month-adjust">
+                  <button class="arrow-left"></button>
+                  <span class="current-month">2025년 1월</span>
+                  <button class="arrow-right"></button>
+                </div>
+                <div class="student-num-frame">
+                  <div class="student-common-box">
+                    입회한 학생 수<span id="joined-students">5</span>
+                  </div>
+                  <div class="student-common-box">
+                    탈퇴한 학생 수<span id="withdrawn-students">2</span>
+                  </div>
+                  <div class="student-common-box">
+                    최근 3개월 변동 <span id="recent-change">+7</span>
+                  </div>
+                  <div class="student-common-box">
+                    총 학생 수<span id="total-students">61</span>
+                  </div>
+                </div>
+              </div>
+              <div class="entry-list-frame">
+                <div class="entry-list">
+                  <div class="small-title">입회 리스트</div>
+                  <div class="table-frame">
+                    <table class="basic-table entry-table">
+                      <colgroup>
+                        <col style="width: 8%;">
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th class="checkbox-group">
+                            <input type="checkbox" id="" name="" value="">
+                          </th>
+                          <th>이름</th>
+                          <th>학교/유치원</th>
+                          <th>학년</th>
+                          <th>수강과목</th>
+                          <th>입회일</th>
+                        </tr>
+                      </thead>
+                      <tbody id="">
+                        <tr>
+                          <td class="checkbox-group">
+                            <input type="checkbox" id="" name="" value="">
+                          </td>
+                          <td>김호호</td>
+                          <td>호호초등학교</td>
+                          <td>초1</td>
+                          <td>초등전체, 새움, 독클</td>
+                          <td>2025.1.12</td>
+                        </tr>
+                        <tr>
+                          <td class="checkbox-group">
+                            <input type="checkbox" id="" name="" value="">
+                          </td>
+                          <td>김호이</td>
+                          <td>호호유치원</td>
+                          <td>예비</td>
+                          <td>호호하니, 호호루키</td>
+                          <td>2025.1.12</td>
+                        </tr>                
+                        <tr>
+                          <td class="checkbox-group">
+                            <input type="checkbox" id="" name="" value="">
+                          </td>
+                          <td>김호이</td>
+                          <td>호호유치원</td>
+                          <td>예비</td>
+                          <td>호호하니, 호호루키</td>
+                          <td>2025.1.12</td>
+                        </tr>                
+                        <tr>
+                          <td class="checkbox-group">
+                            <input type="checkbox" id="" name="" value="">
+                          </td>
+                          <td>김호이</td>
+                          <td>호호유치원</td>
+                          <td>예비</td>
+                          <td>호호하니, 호호루키</td>
+                          <td>2025.1.12</td>
+                        </tr>                
+                        <tr>
+                          <td class="checkbox-group">
+                            <input type="checkbox" id="" name="" value="">
+                          </td>
+                          <td>김호이</td>
+                          <td>호호유치원</td>
+                          <td>예비</td>
+                          <td>호호하니, 호호루키</td>
+                          <td>2025.1.12</td>
+                        </tr>                
+                        <tr>
+                          <td class="checkbox-group">
+                            <input type="checkbox" id="" name="" value="">
+                          </td>
+                          <td>김호이</td>
+                          <td>호호유치원</td>
+                          <td>예비</td>
+                          <td>호호하니, 호호루키</td>
+                          <td>2025.1.12</td>
+                        </tr>                
+                        <tr>
+                          <td class="checkbox-group">
+                            <input type="checkbox" id="" name="" value="">
+                          </td>
+                          <td>김호이</td>
+                          <td>호호유치원</td>
+                          <td>예비</td>
+                          <td>호호하니, 호호루키</td>
+                          <td>2025.1.12</td>
+                        </tr>                
+                        <tr>
+                          <td class="checkbox-group">
+                            <input type="checkbox" id="" name="" value="">
+                          </td>
+                          <td>김호이</td>
+                          <td>호호유치원</td>
+                          <td>예비</td>
+                          <td>호호하니, 호호루키</td>
+                          <td>2025.1.12</td>
+                        </tr>                
+                        <tr>
+                          <td class="checkbox-group">
+                            <input type="checkbox" id="" name="" value="">
+                          </td>
+                          <td>김호이</td>
+                          <td>호호유치원</td>
+                          <td>예비</td>
+                          <td>호호하니, 호호루키</td>
+                          <td>2025.1.12</td>
+                        </tr>                
+                        <tr>
+                          <td class="checkbox-group">
+                            <input type="checkbox" id="" name="" value="">
+                          </td>
+                          <td>김호이</td>
+                          <td>호호유치원</td>
+                          <td>예비</td>
+                          <td>호호하니, 호호루키</td>
+                          <td>2025.1.12</td>
+                        </tr>                
+                        <tr>
+                          <td class="checkbox-group">
+                            <input type="checkbox" id="" name="" value="">
+                          </td>
+                          <td>김호이</td>
+                          <td>호호유치원</td>
+                          <td>예비</td>
+                          <td>호호하니, 호호루키</td>
+                          <td>2025.1.12</td>
+                        </tr>                
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="cancel-enroll">
+                    <img src="/image/cancel-icon.png" alt="">선택 학생 입회 취소
+                  </div>
+                </div>
+                <div class="exit-list">
+                  <div class="small-title">탈퇴 리스트</div>
+                  <div class="table-frame">
+                    <table class="basic-table entry-table">
+                      <colgroup>
+                        <col style="width: 8%;">
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th class="checkbox-group">
+                            <input type="checkbox" id="" name="" value="">
+                          </th>
+                          <th>이름</th>
+                          <th>학교/유치원</th>
+                          <th>학년</th>
+                          <th>수강과목</th>
+                          <th>입회일</th>
+                        </tr>
+                      </thead>
+                      <tbody id="">
+                        <tr>
+                          <td class="checkbox-group">
+                            <input type="checkbox" id="" name="" value="">
+                          </td>
+                          <td>김호호</td>
+                          <td>호호초등학교</td>
+                          <td>초1</td>
+                          <td>초등전체, 새움, 독클</td>
+                          <td>2025.1.12</td>
+                        </tr>
+                        <tr>
+                          <td class="checkbox-group">
+                            <input type="checkbox" id="" name="" value="">
+                          </td>
+                          <td>김호이</td>
+                          <td>호호유치원</td>
+                          <td>예비</td>
+                          <td>호호하니, 호호루키</td>
+                          <td>2025.1.12</td>
+                        </tr>                
+                        <tr>
+                          <td class="checkbox-group">
+                            <input type="checkbox" id="" name="" value="">
+                          </td>
+                          <td>김호이</td>
+                          <td>호호유치원</td>
+                          <td>예비</td>
+                          <td>호호하니, 호호루키</td>
+                          <td>2025.1.12</td>
+                        </tr>                
+                        <tr>
+                          <td class="checkbox-group">
+                            <input type="checkbox" id="" name="" value="">
+                          </td>
+                          <td>김호이</td>
+                          <td>호호유치원</td>
+                          <td>예비</td>
+                          <td>호호하니, 호호루키</td>
+                          <td>2025.1.12</td>
+                        </tr>                
+                        <tr>
+                          <td class="checkbox-group">
+                            <input type="checkbox" id="" name="" value="">
+                          </td>
+                          <td>김호이</td>
+                          <td>호호유치원</td>
+                          <td>예비</td>
+                          <td>호호하니, 호호루키</td>
+                          <td>2025.1.12</td>
+                        </tr>                
+                        <tr>
+                          <td class="checkbox-group">
+                            <input type="checkbox" id="" name="" value="">
+                          </td>
+                          <td>김호이</td>
+                          <td>호호유치원</td>
+                          <td>예비</td>
+                          <td>호호하니, 호호루키</td>
+                          <td>2025.1.12</td>
+                        </tr>                
+                        <tr>
+                          <td class="checkbox-group">
+                            <input type="checkbox" id="" name="" value="">
+                          </td>
+                          <td>김호이</td>
+                          <td>호호유치원</td>
+                          <td>예비</td>
+                          <td>호호하니, 호호루키</td>
+                          <td>2025.1.12</td>
+                        </tr>                
+                        <tr>
+                          <td class="checkbox-group">
+                            <input type="checkbox" id="" name="" value="">
+                          </td>
+                          <td>김호이</td>
+                          <td>호호유치원</td>
+                          <td>예비</td>
+                          <td>호호하니, 호호루키</td>
+                          <td>2025.1.12</td>
+                        </tr>                
+                        <tr>
+                          <td class="checkbox-group">
+                            <input type="checkbox" id="" name="" value="">
+                          </td>
+                          <td>김호이</td>
+                          <td>호호유치원</td>
+                          <td>예비</td>
+                          <td>호호하니, 호호루키</td>
+                          <td>2025.1.12</td>
+                        </tr>                
+                        <tr>
+                          <td class="checkbox-group">
+                            <input type="checkbox" id="" name="" value="">
+                          </td>
+                          <td>김호이</td>
+                          <td>호호유치원</td>
+                          <td>예비</td>
+                          <td>호호하니, 호호루키</td>
+                          <td>2025.1.12</td>
+                        </tr>                
+                        <tr>
+                          <td class="checkbox-group">
+                            <input type="checkbox" id="" name="" value="">
+                          </td>
+                          <td>김호이</td>
+                          <td>호호유치원</td>
+                          <td>예비</td>
+                          <td>호호하니, 호호루키</td>
+                          <td>2025.1.12</td>
+                        </tr>                
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="restore-enroll">
+                    <img src="/image/undo-icon.png" alt="">
+                    선택 학생 탈퇴 취소 (복구)
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="delete-student">
+              <div class="delete-student-btn">탈퇴 학생 데이터 삭제</div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+  <script src="/js/loadHTML.js"></script>
+</body>
+</html>
