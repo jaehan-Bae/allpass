@@ -1013,7 +1013,7 @@ canvas {
   background: #889cc7;
 }
 
-/* ======================= student-info page ======================= */
+/* ======================= student-main page ======================= */
 .student-frame,
 .thrid-frame {
   display: flex;
@@ -1166,18 +1166,20 @@ tbody tr:hover:not(.calendar-table tr) {
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0;
-  visibility: hidden;
-  /* display: none; */
+  /* opacity: 0;
+  visibility: hidden; */
+  display: none;
   transition: .35s ease;
   padding-bottom: 30px;
   width: 80%;
 }
-.tab:target {
+.tab.active {
+  display: block;
+}
+/* .tab:target {
   opacity: 1;
   visibility: visible;
-  /* display: block; */
-}
+} */
 .tab:first-child {
   /* display: block; */
 }

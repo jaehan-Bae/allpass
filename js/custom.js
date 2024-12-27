@@ -41,5 +41,18 @@ $(function(){
       document.getElementById(tab).classList.add('active');
     });
   });
+  // student-main tab
+  const btns = document.querySelectorAll('.info-tab-btn a');
+  const materials = document.querySelectorAll('.tab');
+  
+  btns.forEach(button => {
+    button.addEventListener('click', () => {
+      btns.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+      materials.forEach(material => material.classList.remove('active'));
+      const tabs = button.getAttribute('data-tab');
+      document.getElementById(tabs).classList.add('active');
+    });
+  });
   
 })
