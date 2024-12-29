@@ -1,8 +1,13 @@
 $(function(){
-  $('.menu-toggle').click(function() {
-    $(this).siblings('.submenu').toggle();
-    $(this).toggleClass('active')
+  $(document).on('click', '.sidebar-item .menu-toggle', function() {
+    $(this).next('.submenu').stop().slideToggle(300);
+    $(this).toggleClass('active');
   });
+  
+  $('.sidebar-item .submenu').click(function(){
+    $(this).stop().slideUp(300);
+  });
+
   $('.info-tab-btn a').click(function() {
     $(this).addClass('active');
     $(this).siblings('.info-tab-btn a').removeClass('active');
