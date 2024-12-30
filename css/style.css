@@ -1129,10 +1129,11 @@ canvas {
 tbody tr {
   transition: .3s ease;
 }
-tbody tr:hover:not(.calendar-table tr) {
+/* 노란 호버 */
+/* tbody tr:hover:not(.calendar-table tr) {
   background: #FFD236;
   cursor: pointer;
-}
+} */
 #institute-exist + label,
 .radio-group label {
   margin-right: 20px;
@@ -1710,9 +1711,9 @@ tbody tr:hover:not(.calendar-table tr) {
 .move-list .content-table td {
   padding: 8px;
 }
-.basic-table tr:nth-child(even) {
+/* .basic-table tr:nth-child(even) {
   background-color: #FBFCFF;
-}
+} */
 .move-list .content-table td:last-child {
   width: 35%;
 }
@@ -2069,4 +2070,95 @@ input[type="time" i] {
 } */
 .time-change-modal-content .save-btn {
   margin-top: 30px;
+}
+
+/* ======================= time-view page ======================= */
+.timeview-frame {
+  height: auto;
+  width: 75%;
+}
+.timeview-table-frame {
+  max-height: none;
+}
+.timeview-table {
+  table-layout: fixed;
+  height: auto;
+}
+.timeview-table th {
+  background: #5A7CE2;
+  border-color: transparent;
+  color: #fff;
+}
+.timeview-table th,
+.timeview-table td {
+  border: 1px solid #CCD8F1;
+  text-align: center;
+}
+.timeview-table tr {
+  line-height: 1.6rem;
+}
+.timeview-table .merged {
+  background: #F7F9FF;
+  border-bottom: none;
+  min-height: 50px;
+  height: 50px;
+  font-weight: bold;
+  color: #7E8FB5;
+}
+.timeview-table .dotted {
+  border-bottom: none;
+}
+.timeview-table td {
+  height: 20px;
+  min-height: 20px;
+}
+.timeview-table .dotted .name-tag {
+  border-bottom: 1px dotted #CCD8F1;
+  min-height: 20px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.name-tag img {
+  margin-right: 3px;
+}
+.timeview-table .dotted .name:last-child {
+  border-bottom: none;
+}
+.timetable-time {
+  margin-bottom: 0;
+}
+.merged .badge-han,
+.merged .badge-book {
+  font-size: 12px;
+}
+.timeview-tfoot {
+  table-layout: fixed;
+}
+.vertical-header {
+  background: red;
+  writing-mode: vertical-rl;
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  font-weight: 400;
+  width: 30px;
+}
+.timeview-tfoot-header {
+  background-color: #F7F9FF;
+}
+.timeview-tfoot tr {
+  line-height: 1.6rem;
+}
+.timeview-tfoot td {
+  border-right: 1px solid #ddd;
+}
+.name-details {
+  height: 50px;
+}
+.all-hands {
+  background: #5A7CE2;
+  color: #fff;
+  text-align: center;
 }

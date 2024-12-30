@@ -4,145 +4,107 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tab Menu with Table</title>
-  <style>
-    .time-tab-menu {
-      display: flex;
-      margin-bottom: 20px;
-      border: 2px solid #DFE6F7;
-      border-radius: 15px;
-      overflow: hidden;
-    }
-    .time-tab-menu button {
-      flex: 1;
-      padding: 10px 0;
-      background: #fff;
-      border: #5A7CE2;
-      cursor: pointer;
-      font-size: 16px;
-      text-align: center;
-      transition: background 0.3s;
-      font-weight: bold;
-      color: #5A7CE2;
-    }
-    .time-tab-menu button.active {
-      background: #5A7CE2;
-      color: white;
-    }
-    .time-tab-content {
-      display: none;
-    }
-    .time-tab-content.active {
-      display: block;
-    }
-
-    /* 테이블 스타일 */
-    .time-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-      background-color: white;
-      border-radius: 15px;
-      color: #8C9BBD;
-    }
-    .time-table th, 
-    .time-table td {
-      border: 1px solid #ddd;
-      padding: 10px;
-      text-align: center;
-    }
-    .time-table th {
-      background-color: #F7F9FF;
-      font-weight: bold;
-    }
-    .time-table th:nth-child(1) {
-      width: 10%;
-    }
-    .time-table th:nth-child(2) {
-      width: 15%;
-    }
-    .time-table th:nth-child(3) {
-      width: 30%;
-    }
-    .time-table th:nth-child(4) {
-      width: 25%;
-    }
-    .time-table th:nth-child(5) {
-      width: 20%;
-    }
-    .time-table tbody tr td:not(:nth-child(4)) {
-      background-color: #F7F9FF;
-    }
-  </style>
 </head>
 <body>
 
-<!-- 탭 메뉴 -->
-<div class="time-tab-menu">
-  <button class="time-tab-button active" data-tab="mon">월</button>
-  <button class="time-tab-button" data-tab="tue">화</button>
-  <button class="time-tab-button" data-tab="wed">수</button>
-  <button class="time-tab-button" data-tab="thu">목</button>
-  <button class="time-tab-button" data-tab="fri">금</button>
-</div>
-
-<!-- 탭 내용 -->
-<div class="time-tab-content active" id="mon">
-  <table class="time-table">
-    <thead>
-      <tr>
-        <th>교시</th>
-        <th>시간</th>
-        <th>과목</th>
-        <th>학생명</th>
-        <th>총 인원</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>1</td>
-        <td>15:00-15:50</td>
-        <td>초등박사 1호</td>
-        <td>김호일, 김호이</td>
-        <td>8</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>16:00-16:50</td>
-        <td>-</td>
-        <td>-</td>
-        <td>-</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-<div class="time-tab-content" id="tue">
-  <p>화요일 데이터</p>
-</div>
-<div class="time-tab-content" id="wed">
-  <p>수요일 데이터</p>
-</div>
-<div class="time-tab-content" id="thu">
-  <p>목요일 데이터</p>
-</div>
-<div class="time-tab-content" id="fri">
-  <p>금요일 데이터</p>
-</div>
-
-<script>
-  // 순수 JS로 탭 전환 기능 구현
-  const buttons = document.querySelectorAll('.time-tab-button');
-  const contents = document.querySelectorAll('.time-tab-content');
-
-  buttons.forEach(button => {
-    button.addEventListener('click', () => {
-      buttons.forEach(btn => btn.classList.remove('active'));
-      button.classList.add('active');
-      contents.forEach(content => content.classList.remove('active'));
-      const tab = button.getAttribute('data-tab');
-      document.getElementById(tab).classList.add('active');
-    });
-  });
-</script>
+  <div class="timeview-table-frame">
+    <table class="timeview-table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>월</th>
+          <th>월</th>
+          <th>화</th>
+          <th>화</th>
+          <th>수</th>
+          <th>수</th>
+          <th>목</th>
+          <th>목</th>
+          <th>금</th>
+          <th>금</th>
+          <th>토</th>
+          <th>토</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="2" class="merged">02:00 ~ 02:50</td>
+          <td colspan="2" class="merged">동작 복사 1조</td>
+          <td colspan="2" class="merged">동작 복사 1조</td>
+          <td colspan="2" class="merged">동작 복사 1조</td>
+          <td colspan="2" class="merged">동작 복사 1조</td>
+          <td colspan="2" class="merged">동작 복사 1조</td>
+        </tr>
+        <tr>
+          <td colspan="4" class="solid-wrapper">
+            <div class="name">이도현</div>
+            <div class="name">이도현</div>
+            <div class="name">박지원</div>
+            <div class="name">이재준</div>
+          </td>
+          <td colspan="4" class="solid-wrapper">
+            <div class="name">이도현</div>
+            <div class="name">정서준</div>
+            <div class="name">박지원</div>
+            <div class="name">이재준</div>
+          </td>
+          <td colspan="4" class="solid-wrapper">
+            <div class="name">이도현</div>
+            <div class="name">정서준</div>
+            <div class="name">박지원</div>
+            <div class="name">이재준</div>
+          </td>
+        </tr>
+        <!-- 반복 구조 -->
+      </tbody>
+    </table>
+  </div>
+  
+  <style>
+  .timeview-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+  
+  .timeview-table th {
+    background: #5A7CE2;
+    border-color: transparent;
+    color: #fff;
+    border: 1px solid #000; /* Solid border for weekdays */
+  }
+  
+  .timeview-table th,
+  .timeview-table td {
+    border: 1px solid #000;
+    text-align: center;
+  }
+  
+  .timeview-table .merged {
+    background: #F7F9FF;
+    border-bottom: none;
+  }
+  
+  .timeview-table .solid-wrapper {
+    border: 2px solid #CCD8F1; /* Solid border for outer cell */
+    padding: 0;
+  }
+  
+  .timeview-table .solid-wrapper .name {
+    border-bottom: 1px dotted #CCD8F1; /* Dotted border between names */
+    padding: 5px;
+  }
+  
+  .timeview-table .solid-wrapper .name:last-child {
+    border-bottom: none; /* Remove dotted border for last name */
+  }
+  
+  .timeview-table td {
+    vertical-align: middle;
+  }
+  </style>
+  
+  
 
 </body>
 </html>
