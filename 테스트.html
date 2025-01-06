@@ -1,110 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tab Menu with Table</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스마트폰 입력 UI</title>
+    <style>
+        .smartphone {
+            width: 300px;
+            height: 600px;
+            background-color: #F7F9FF;
+            border: 1px solid #DADADA;
+            border-radius: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px 10px 20px;
+        }
+        .screen {
+            flex-grow: 1;
+            width: 100%;
+            background-color: #FFFFFF;
+            border: 1px solid #DADADA;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .screen-input {
+            width: 90%;
+        }
+        .screen-input texta {
+            width: 100%;
+            padding: 0px;
+            font-size: 16px;
+            border: 1px solid transparent;
+            border-radius: 8px;
+            outline: none;
+        }
+        .bottom-bar {
+            width: 60px;
+            height: 20px;
+            background-color: #F7F9FF;
+            border-radius: 10px;
+            margin: 10px 0;
+            border: 1px solid #E5E5E6;
+        }
+    </style>
 </head>
 <body>
-
-  <div class="timeview-table-frame">
-    <table class="timeview-table">
-      <thead>
-        <tr>
-          <th></th>
-          <th>월</th>
-          <th>월</th>
-          <th>화</th>
-          <th>화</th>
-          <th>수</th>
-          <th>수</th>
-          <th>목</th>
-          <th>목</th>
-          <th>금</th>
-          <th>금</th>
-          <th>토</th>
-          <th>토</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td colspan="2" class="merged">02:00 ~ 02:50</td>
-          <td colspan="2" class="merged">동작 복사 1조</td>
-          <td colspan="2" class="merged">동작 복사 1조</td>
-          <td colspan="2" class="merged">동작 복사 1조</td>
-          <td colspan="2" class="merged">동작 복사 1조</td>
-          <td colspan="2" class="merged">동작 복사 1조</td>
-        </tr>
-        <tr>
-          <td colspan="4" class="solid-wrapper">
-            <div class="name">이도현</div>
-            <div class="name">이도현</div>
-            <div class="name">박지원</div>
-            <div class="name">이재준</div>
-          </td>
-          <td colspan="4" class="solid-wrapper">
-            <div class="name">이도현</div>
-            <div class="name">정서준</div>
-            <div class="name">박지원</div>
-            <div class="name">이재준</div>
-          </td>
-          <td colspan="4" class="solid-wrapper">
-            <div class="name">이도현</div>
-            <div class="name">정서준</div>
-            <div class="name">박지원</div>
-            <div class="name">이재준</div>
-          </td>
-        </tr>
-        <!-- 반복 구조 -->
-      </tbody>
-    </table>
-  </div>
-  
-  <style>
-  .timeview-table {
-    width: 100%;
-    border-collapse: collapse;
-    table-layout: fixed;
-  }
-  
-  .timeview-table th {
-    background: #5A7CE2;
-    border-color: transparent;
-    color: #fff;
-    border: 1px solid #000; /* Solid border for weekdays */
-  }
-  
-  .timeview-table th,
-  .timeview-table td {
-    border: 1px solid #000;
-    text-align: center;
-  }
-  
-  .timeview-table .merged {
-    background: #F7F9FF;
-    border-bottom: none;
-  }
-  
-  .timeview-table .solid-wrapper {
-    border: 2px solid #CCD8F1; /* Solid border for outer cell */
-    padding: 0;
-  }
-  
-  .timeview-table .solid-wrapper .name {
-    border-bottom: 1px dotted #CCD8F1; /* Dotted border between names */
-    padding: 5px;
-  }
-  
-  .timeview-table .solid-wrapper .name:last-child {
-    border-bottom: none; /* Remove dotted border for last name */
-  }
-  
-  .timeview-table td {
-    vertical-align: middle;
-  }
-  </style>
-  
-  
-
+    <div class="smartphone">
+        <div class="screen">
+            <div class="screen-input">
+                <textarea type="text" placeholder="내용을 입력하세요.">
+            </div>
+        </div>
+        <div class="bottom-bar"></div>
+    </div>
 </body>
 </html>

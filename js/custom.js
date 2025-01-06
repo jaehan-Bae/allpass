@@ -1,4 +1,46 @@
 $(function(){
+  /* ====== conslut.html ====== */
+  // modal
+  $('.counsel-button').click(function() {
+    $('.modal').fadeIn()
+  });
+  $('.btn-close').click(function() {
+    $('.modal').fadeOut();
+  });
+  $('.modal').click(function(event) {
+    if ($(event.target).is('.modal')) {
+      $('.modal').fadeOut();
+    }
+  });
+
+  /* ====== manage-teacher.html ====== */
+  // delete modal
+    $('.check-delete').click(function() {
+      $('.delete-modal').fadeIn();
+    });
+    // add manager modal
+    $('.add-manager').click(function() {
+      $('.manager-modal').fadeIn();
+    });
+
+  /* ====== book-result.html ====== */
+    // book-result modal
+    $('.book-result-btn').click(function() {
+      $('.book-result-modal').fadeIn();
+    });
+
+  /* ====== manage-sms.html ====== */
+    // word-modify modal
+    $('#word-modify').click(function() {
+      $('.sms-modal').fadeIn();
+    });
+    // point-charge modal
+    $('#check-point').click(function() {
+      $('.point-modal').fadeIn();
+    });
+  
+  /* ====== sidebar.html ====== */
+  // side bar menu toggle
   $(document).on('click', '.sidebar-item .menu-toggle', function() {
     $(this).next('.submenu').stop().slideToggle(300);
     $(this).toggleClass('active');
@@ -13,26 +55,7 @@ $(function(){
     $(this).siblings('.info-tab-btn a').removeClass('active');
   });
 
-  // modal
-  $('.counsel-button').click(function() {
-    $('.modal').fadeIn()
-  });
-  $('.btn-close').click(function() {
-    $('.modal').fadeOut();
-  });
-  $('.modal').click(function(event) {
-    if ($(event.target).is('.modal')) {
-      $('.modal').fadeOut();
-    }
-  });
-// delete modal
-  $('.check-delete').click(function() {
-    $('.delete-modal').fadeIn()
-  });
-  // add manager modal
-  $('.add-manager').click(function() {
-    $('.manager-modal').fadeIn()
-  });
+  /* ====== class-timetable.html ====== */
   // class-timetable tab
   const buttons = document.querySelectorAll('.time-tab-button');
   const contents = document.querySelectorAll('.time-tab-content');
@@ -46,6 +69,8 @@ $(function(){
       document.getElementById(tab).classList.add('active');
     });
   });
+  
+  /* ====== student-main.html ====== */
   // student-main tab
   const btns = document.querySelectorAll('.info-tab-btn a');
   const materials = document.querySelectorAll('.tab');
@@ -59,5 +84,4 @@ $(function(){
       document.getElementById(tabs).classList.add('active');
     });
   });
-  
 })
