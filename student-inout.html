@@ -8,7 +8,7 @@
     <script src="/js/custom.js"></script>
     <script src="/js/loadHTML.js"></script>
   <link rel="stylesheet" href="/css/style.css">
-  <title>Document</title>
+  <title>전입/전출</title>
 </head>
 <body>
   <div class="main-container">
@@ -54,8 +54,15 @@
                 </select>
               </div>
             </div>
-            <div class="table-frame move-table-frame">
-              <table class="basic-table move-table">
+            <div class="table-frame move-t-frame">
+              <table class="basic-table move-table yh">
+                <colgroup>
+                  <col width="10%">
+                  <col width="15%">
+                  <col width="25%">
+                  <col width="15%">
+                  <col width="35%">
+                </colgroup>
                 <thead>
                   <tr>
                     <th class="checkbox-group">
@@ -67,7 +74,7 @@
                     <th>수강과목</th>
                   </tr>
                 </thead>
-                <tbody id="">
+                <tbody id="" class="stripe">
                   <tr>
                     <td class="checkbox-group">
                       <input type="checkbox" id="" name="">
@@ -177,7 +184,6 @@
             <div class="move-reason">
               <div class="move-reason-frame">
                 <form action="" class="student-form">
-                  <!-- 일자 -->
                   <div class="form-row">
                     <label for="out-date">전출 일자</label>
                     <input type="date" id="out-date" name="outDate" class="date-input">
@@ -199,8 +205,6 @@
                       </select>
                     </div>
                   </div>
-
-                  <!-- 상담내용 -->
                   <div class="form-row">
                     <label for="consult-content">상담내용</label>
                     <textarea id="consult-content" name="consultContent" rows="7" placeholder="상담 내용을 작성해 주세요."></textarea>
@@ -218,8 +222,15 @@
                   <span class="current-month">2025년 1월</span>
                   <button class="arrow-right"></button>
                 </div>
-                <div class="table-frame move-calendar-frame">
-                  <table class="basic-table content-table">
+                <div class="table-frame move-frame">
+                  <table class="basic-table content-table yh">
+                    <colgroup>
+                      <col width="15%">
+                      <col width="15%">
+                      <col width="20%">
+                      <col width="20%">
+                      <col width="35%">
+                    </colgroup>
                     <thead>
                       <tr>
                         <th>이름</th>
@@ -229,7 +240,7 @@
                         <th>사유</th>
                       </tr>
                     </thead>
-                    <tbody id="consult-tbody">
+                    <tbody id="consult-tbody" class="stripe">
                       <tr>
                         <td>김호일</td>
                         <td>한스쿨</td>

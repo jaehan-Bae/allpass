@@ -53,198 +53,394 @@
                 </div>
               </div>
               <div class="class-before-after">
-                <div class="radio-group">
-                  <input type="radio" id="class-before" name="classBefore" value="exist" checked>
+                <a href="#ctab1" data-tab="ctab1" class="radio-group active">
+                  <input type="radio" id="class-before" name="classBa" value="exist" checked>
                   <label for="class-before">수업 전</label>
-                  <input type="radio" id="class-after" name="classAfter" value="leave">
+                </a>
+                <a href="#ctab2" data-tab="ctab2" class="radio-group">
+                  <input type="radio" id="class-after" name="classBa" value="leave">
                   <label for="class-after">수업 후</label>
-                </div>
+                </a>
               </div>
             </div>
-            <div class="class-info">
-              <div class="weeks-guide">
-                <div class="table-frame weeks-table-frame">
-                  <table class="basic-table weeks-table">
-                    <tbody id="">
-                      <tr>
-                        <td>
-                          <div class="radio-group">
-                            <input type="radio" id="week-label" name="weekLabel" value="" checked>
-                            <label for="week-label">1주</label>
-                          </div>
-                        </td>
-                        <td>
-                          안녕하세요. 호호서당입니다.<br>
-                          <span class="name-highlight">[#학생이름]</span>학생의 이번 주 한자 수업을 안내드립니다.<br>
-                          수업교재: 초등천재 4호<br>
-                          수업내용: 단어를 활용해 문장 만들기<br>
-                          위의 내용을 참고하셔서 꼭 수업시간 전 등원시켜 주시기 바랍니다.<br>
-                          감사합니다.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="radio-group">
-                            <input type="radio" id="week-label" name="weekLabel" value="" checked>
-                            <label for="week-label">2주</label>
-                          </div>
-                        </td>
-                        <td>
-                          안녕하세요. 호호서당입니다.<br>
-                          <span class="name-highlight">[#학생이름]</span>학생의 이번 주 한자 수업을 안내드립니다.<br>
-                          수업교재: 초등천재 4호<br>
-                          수업내용: 단어를 활용해 문장 만들기<br>
-                          위의 내용을 참고하셔서 꼭 수업시간 전 등원시켜 주시기 바랍니다.<br>
-                          감사합니다.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="radio-group">
-                            <input type="radio" id="week-label" name="weekLabel" value="" checked>
-                            <label for="week-label">3주</label>
-                          </div>
-                        </td>
-                        <td>
-                          안녕하세요. 호호서당입니다.<br>
-                          <span class="name-highlight">[#학생이름]</span>학생의 이번 주 한자 수업을 안내드립니다.<br>
-                          수업교재: 초등천재 4호<br>
-                          수업내용: 단어를 활용해 문장 만들기<br>
-                          위의 내용을 참고하셔서 꼭 수업시간 전 등원시켜 주시기 바랍니다.<br>
-                          감사합니다.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="radio-group">
-                            <input type="radio" id="week-label" name="weekLabel" value="" checked>
-                            <label for="week-label">4주</label>
-                          </div>
-                        </td>
-                        <td>
-                          안녕하세요. 호호서당입니다.<br>
-                          <span class="name-highlight">[#학생이름]</span>학생의 이번 주 한자 수업을 안내드립니다.<br>
-                          수업교재: 초등천재 4호<br>
-                          수업내용: 단어를 활용해 문장 만들기<br>
-                          위의 내용을 참고하셔서 꼭 수업시간 전 등원시켜 주시기 바랍니다.<br>
-                          감사합니다.
-                        </td>
-                      </tr>
-
-                    </tbody>
-                  </table>
+            <div class="class-content">
+              <div id="ctab1" class="ctab active">
+                <div class="class-info">
+                  <div class="weeks-guide">
+                    <div class="table-frame weeks-table-frame">
+                      <table class="basic-table weeks-table">
+                        <tbody id="">
+                          <tr>
+                            <td>
+                              <div class="radio-group">
+                                <input type="radio" id="week-label" name="weekLabel" value="" checked>
+                                <label for="week-label">1주</label>
+                              </div>
+                            </td>
+                            <td>
+                              안녕하세요. 호호서당입니다.<br>
+                              <span class="name-highlight">[#학생이름]</span>학생의 이번 주 한자 수업을 안내드립니다.<br>
+                              수업교재: 초등천재 4호<br>
+                              수업내용: 단어를 활용해 문장 만들기<br>
+                              위의 내용을 참고하셔서 꼭 수업시간 전 등원시켜 주시기 바랍니다.<br>
+                              감사합니다.                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="radio-group">
+                                <input type="radio" id="week-label" name="weekLabel" value="" checked>
+                                <label for="week-label">2주</label>
+                              </div>
+                            </td>
+                            <td>
+                              안녕하세요. 호호서당입니다.<br>
+                              <span class="name-highlight">[#학생이름]</span>학생의 이번 주 한자 수업을 안내드립니다.<br>
+                              수업교재: 초등천재 4호<br>
+                              수업내용: 단어를 활용해 문장 만들기<br>
+                              위의 내용을 참고하셔서 꼭 수업시간 전 등원시켜 주시기 바랍니다.<br>
+                              감사합니다.
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="radio-group">
+                                <input type="radio" id="week-label" name="weekLabel" value="" checked>
+                                <label for="week-label">3주</label>
+                              </div>
+                            </td>
+                            <td>
+                              안녕하세요. 호호서당입니다.<br>
+                              <span class="name-highlight">[#학생이름]</span>학생의 이번 주 한자 수업을 안내드립니다.<br>
+                              수업교재: 초등천재 4호<br>
+                              수업내용: 단어를 활용해 문장 만들기<br>
+                              위의 내용을 참고하셔서 꼭 수업시간 전 등원시켜 주시기 바랍니다.<br>
+                              감사합니다.
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="radio-group">
+                                <input type="radio" id="week-label" name="weekLabel" value="" checked>
+                                <label for="week-label">4주</label>
+                              </div>
+                            </td>
+                            <td>
+                              안녕하세요. 호호서당입니다.<br>
+                              <span class="name-highlight">[#학생이름]</span>학생의 이번 주 한자 수업을 안내드립니다.<br>
+                              수업교재: 초등천재 4호<br>
+                              수업내용: 단어를 활용해 문장 만들기<br>
+                              위의 내용을 참고하셔서 꼭 수업시간 전 등원시켜 주시기 바랍니다.<br>
+                              감사합니다.
+                            </td>
+                          </tr>
+    
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="name-guide">
+                    <div class="table-frame name-frame">
+                    <table class="basic-table">
+                      <colgroup>
+                        <col width="20%">
+                        <col width="25%">
+                        <col width="30%">
+                        <col width="25%">
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th class="checkbox-group">
+                            <input type="checkbox" id="" name="">
+                          </th>
+                          <th>이름</th>
+                          <th>학교/유치원</th>
+                          <th>학년</th>
+                        </tr>
+                      </thead>
+                      <tbody id="" class="stripe">
+                        <tr>
+                          <td class="checkbox-group">
+                            <input type="checkbox" id="" name="">
+                          </td>
+                          <td>김호호</td>
+                          <td>호호초등학교</td>
+                          <td>초1</td>
+                        </tr>
+                        <tr>
+                          <td class="checkbox-group">
+                            <input type="checkbox" id="" name="">
+                          </td>
+                          <td>김호이</td>
+                          <td>호호유치원</td>
+                          <td>예비</td>
+                        </tr>                
+                        <tr>
+                          <td class="checkbox-group">
+                            <input type="checkbox" id="" name="">
+                          </td>
+                          <td>김호이</td>
+                          <td>호호유치원</td>
+                          <td>예비</td>
+                        </tr>                
+                        <tr>
+                          <td class="checkbox-group">
+                            <input type="checkbox" id="" name="">
+                          </td>
+                          <td>김호이</td>
+                          <td>호호유치원</td>
+                          <td>예비</td>
+                        </tr>                
+                        <tr>
+                          <td class="checkbox-group">
+                            <input type="checkbox" id="" name="">
+                          </td>
+                          <td>김호이</td>
+                          <td>호호유치원</td>
+                          <td>예비</td>
+                        </tr>                
+                        <tr>
+                          <td class="checkbox-group">
+                            <input type="checkbox" id="" name="">
+                          </td>
+                          <td>김호이</td>
+                          <td>호호유치원</td>
+                          <td>예비</td>
+                        </tr>                
+                        <tr>
+                          <td class="checkbox-group">
+                            <input type="checkbox" id="" name="">
+                          </td>
+                          <td>김호이</td>
+                          <td>호호유치원</td>
+                          <td>예비</td>
+                        </tr>                
+                        <tr>
+                          <td class="checkbox-group">
+                            <input type="checkbox" id="" name="">
+                          </td>
+                          <td>김호이</td>
+                          <td>호호유치원</td>
+                          <td>예비</td>
+                        </tr>                
+                        <tr>
+                          <td class="checkbox-group">
+                            <input type="checkbox" id="" name="">
+                          </td>
+                          <td>김호이</td>
+                          <td>호호유치원</td>
+                          <td>예비</td>
+                        </tr>                
+                        <tr>
+                          <td class="checkbox-group">
+                            <input type="checkbox" id="" name="">
+                          </td>
+                          <td>김호이</td>
+                          <td>호호유치원</td>
+                          <td>예비</td>
+                        </tr>                
+                        <tr>
+                          <td class="checkbox-group">
+                            <input type="checkbox" id="" name="">
+                          </td>
+                          <td>김호이</td>
+                          <td>호호유치원</td>
+                          <td>예비</td>
+                        </tr>                
+                      </tbody>
+                    </table>
+                    </div>
+                    <div class="modify-info">
+                      <div class="modify-info-frame">
+                        · 수업 주를 선택하고 발송할 내용을 수정할 수 있습니다.<br>
+                        · <span class="name-highlight">[#학생이름]</span>사용 시, 각 학생별 이름으로 자동 발송됩니다.<br>
+                        · 이전 발송 내역은 오른쪽 리스트에서 확인이 가능합니다.<br>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="name-guide">
-                <div class="table-frame name-table-frame">
-                  <table class="basic-table name-table">
-                    <thead>
-                      <tr>
-                        <th class="checkbox-group">
-                          <input type="checkbox" id="" name="">
-                        </th>
-                        <th>이름</th>
-                        <th>학교/유치원</th>
-                        <th>학년</th>
-                      </tr>
-                    </thead>
-                    <tbody id="">
-                      <tr>
-                        <td class="checkbox-group">
-                          <input type="checkbox" id="" name="">
-                        </td>
-                        <td>김호호</td>
-                        <td>호호초등학교</td>
-                        <td>초1</td>
-                      </tr>
-                      <tr>
-                        <td class="checkbox-group">
-                          <input type="checkbox" id="" name="">
-                        </td>
-                        <td>김호이</td>
-                        <td>호호유치원</td>
-                        <td>예비</td>
-                      </tr>                
-                      <tr>
-                        <td class="checkbox-group">
-                          <input type="checkbox" id="" name="">
-                        </td>
-                        <td>김호이</td>
-                        <td>호호유치원</td>
-                        <td>예비</td>
-                      </tr>                
-                      <tr>
-                        <td class="checkbox-group">
-                          <input type="checkbox" id="" name="">
-                        </td>
-                        <td>김호이</td>
-                        <td>호호유치원</td>
-                        <td>예비</td>
-                      </tr>                
-                      <tr>
-                        <td class="checkbox-group">
-                          <input type="checkbox" id="" name="">
-                        </td>
-                        <td>김호이</td>
-                        <td>호호유치원</td>
-                        <td>예비</td>
-                      </tr>                
-                      <tr>
-                        <td class="checkbox-group">
-                          <input type="checkbox" id="" name="">
-                        </td>
-                        <td>김호이</td>
-                        <td>호호유치원</td>
-                        <td>예비</td>
-                      </tr>                
-                      <tr>
-                        <td class="checkbox-group">
-                          <input type="checkbox" id="" name="">
-                        </td>
-                        <td>김호이</td>
-                        <td>호호유치원</td>
-                        <td>예비</td>
-                      </tr>                
-                      <tr>
-                        <td class="checkbox-group">
-                          <input type="checkbox" id="" name="">
-                        </td>
-                        <td>김호이</td>
-                        <td>호호유치원</td>
-                        <td>예비</td>
-                      </tr>                
-                      <tr>
-                        <td class="checkbox-group">
-                          <input type="checkbox" id="" name="">
-                        </td>
-                        <td>김호이</td>
-                        <td>호호유치원</td>
-                        <td>예비</td>
-                      </tr>                
-                      <tr>
-                        <td class="checkbox-group">
-                          <input type="checkbox" id="" name="">
-                        </td>
-                        <td>김호이</td>
-                        <td>호호유치원</td>
-                        <td>예비</td>
-                      </tr>                
-                      <tr>
-                        <td class="checkbox-group">
-                          <input type="checkbox" id="" name="">
-                        </td>
-                        <td>김호이</td>
-                        <td>호호유치원</td>
-                        <td>예비</td>
-                      </tr>                
-                    </tbody>
-                  </table>
-                </div>
-                <div class="modify-info">
-                  <div class="modify-info-frame">
-                    · 수업 주를 선택하고 발송할 내용을 수정할 수 있습니다.<br>
-                    · <span class="name-highlight">[#학생이름]</span>사용 시, 각 학생별 이름으로 자동 발송됩니다.<br>
-                    · 이전 발송 내역은 오른쪽 리스트에서 확인이 가능합니다.<br>
+              <div id="ctab2" class="ctab">
+                <div class="class-info">
+                  <div class="weeks-guide">
+                    <div class="table-frame weeks-table-frame">
+                      <table class="basic-table weeks-table">
+                        <tbody id="">
+                          <tr>
+                            <td>
+                              <div class="radio-group">
+                                <input type="radio" id="week-label" name="weekLabel" value="" checked>
+                                <label for="week-label">1주</label>
+                              </div>
+                            </td>
+                            <td>
+                              수업 후 테이블
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="radio-group">
+                                <input type="radio" id="week-label" name="weekLabel" value="" checked>
+                                <label for="week-label">2주</label>
+                              </div>
+                            </td>
+                            <td>
+                              안녕하세요. 호호서당입니다.<br>
+                              <span class="name-highlight">[#학생이름]</span>학생의 이번 주 한자 수업을 안내드립니다.<br>
+                              수업교재: 초등천재 4호<br>
+                              수업내용: 단어를 활용해 문장 만들기<br>
+                              위의 내용을 참고하셔서 꼭 수업시간 전 등원시켜 주시기 바랍니다.<br>
+                              감사합니다.
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="radio-group">
+                                <input type="radio" id="week-label" name="weekLabel" value="" checked>
+                                <label for="week-label">3주</label>
+                              </div>
+                            </td>
+                            <td>
+                              안녕하세요. 호호서당입니다.<br>
+                              <span class="name-highlight">[#학생이름]</span>학생의 이번 주 한자 수업을 안내드립니다.<br>
+                              수업교재: 초등천재 4호<br>
+                              수업내용: 단어를 활용해 문장 만들기<br>
+                              위의 내용을 참고하셔서 꼭 수업시간 전 등원시켜 주시기 바랍니다.<br>
+                              감사합니다.
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="radio-group">
+                                <input type="radio" id="week-label" name="weekLabel" value="" checked>
+                                <label for="week-label">4주</label>
+                              </div>
+                            </td>
+                            <td>
+                              안녕하세요. 호호서당입니다.<br>
+                              <span class="name-highlight">[#학생이름]</span>학생의 이번 주 한자 수업을 안내드립니다.<br>
+                              수업교재: 초등천재 4호<br>
+                              수업내용: 단어를 활용해 문장 만들기<br>
+                              위의 내용을 참고하셔서 꼭 수업시간 전 등원시켜 주시기 바랍니다.<br>
+                              감사합니다.
+                            </td>
+                          </tr>
+    
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="name-guide">
+                    <div class="table-frame name-table-frame">
+                    <table class="basic-table name-table">
+                      <thead>
+                        <tr>
+                          <th class="checkbox-group">
+                            <input type="checkbox" id="" name="">
+                          </th>
+                          <th>이름</th>
+                          <th>학교/유치원</th>
+                          <th>학년</th>
+                        </tr>
+                      </thead>
+                      <tbody id="">
+                        <tr>
+                          <td class="checkbox-group">
+                            <input type="checkbox" id="" name="">
+                          </td>
+                          <td>김호호</td>
+                          <td>호호초등학교</td>
+                          <td>초1</td>
+                        </tr>
+                        <tr>
+                          <td class="checkbox-group">
+                            <input type="checkbox" id="" name="">
+                          </td>
+                          <td>김호이</td>
+                          <td>호호유치원</td>
+                          <td>예비</td>
+                        </tr>                
+                        <tr>
+                          <td class="checkbox-group">
+                            <input type="checkbox" id="" name="">
+                          </td>
+                          <td>김호이</td>
+                          <td>호호유치원</td>
+                          <td>예비</td>
+                        </tr>                
+                        <tr>
+                          <td class="checkbox-group">
+                            <input type="checkbox" id="" name="">
+                          </td>
+                          <td>김호이</td>
+                          <td>호호유치원</td>
+                          <td>예비</td>
+                        </tr>                
+                        <tr>
+                          <td class="checkbox-group">
+                            <input type="checkbox" id="" name="">
+                          </td>
+                          <td>김호이</td>
+                          <td>호호유치원</td>
+                          <td>예비</td>
+                        </tr>                
+                        <tr>
+                          <td class="checkbox-group">
+                            <input type="checkbox" id="" name="">
+                          </td>
+                          <td>김호이</td>
+                          <td>호호유치원</td>
+                          <td>예비</td>
+                        </tr>                
+                        <tr>
+                          <td class="checkbox-group">
+                            <input type="checkbox" id="" name="">
+                          </td>
+                          <td>김호이</td>
+                          <td>호호유치원</td>
+                          <td>예비</td>
+                        </tr>                
+                        <tr>
+                          <td class="checkbox-group">
+                            <input type="checkbox" id="" name="">
+                          </td>
+                          <td>김호이</td>
+                          <td>호호유치원</td>
+                          <td>예비</td>
+                        </tr>                
+                        <tr>
+                          <td class="checkbox-group">
+                            <input type="checkbox" id="" name="">
+                          </td>
+                          <td>김호이</td>
+                          <td>호호유치원</td>
+                          <td>예비</td>
+                        </tr>                
+                        <tr>
+                          <td class="checkbox-group">
+                            <input type="checkbox" id="" name="">
+                          </td>
+                          <td>김호이</td>
+                          <td>호호유치원</td>
+                          <td>예비</td>
+                        </tr>                
+                        <tr>
+                          <td class="checkbox-group">
+                            <input type="checkbox" id="" name="">
+                          </td>
+                          <td>김호이</td>
+                          <td>호호유치원</td>
+                          <td>예비</td>
+                        </tr>                
+                      </tbody>
+                    </table>
+                    </div>
+                    <div class="modify-info">
+                      <div class="modify-info-frame">
+                        · 수업 주를 선택하고 발송할 내용을 수정할 수 있습니다.<br>
+                        · <span class="name-highlight">[#학생이름]</span>사용 시, 각 학생별 이름으로 자동 발송됩니다.<br>
+                        · 이전 발송 내역은 오른쪽 리스트에서 확인이 가능합니다.<br>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -268,7 +464,7 @@
                     <th>이름</th>
                   </tr>
                 </thead>
-                <tbody id="">
+                <tbody id="" class="stripe">
                   <tr>
                     <td>2015-01-15 17:45</td>
                     <td>

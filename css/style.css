@@ -61,11 +61,14 @@ input, select {
 table {
   word-break: break-word;
   white-space: normal;
-  /* table-layout: fixed; */
 }
 table td {
   overflow: hidden;
   text-overflow: ellipsis;
+}
+.basic-table th,
+.basic-table td {
+  height: 35px;
 }
 
 /* ############################# Common.css ############################# */
@@ -91,6 +94,62 @@ textarea::-webkit-scrollbar-thumb:hover,
   background: #2b3eb2;
   cursor: pointer;
 }
+/* table yellow hover */
+.yh tbody tr:hover {
+  background: #FFD236;
+}
+/* odd stripe hover */
+.stripe tr:nth-child(odd) {
+  background: #F7F9FF;
+}
+/* table custom */
+tbody tr {
+  transition: .3s ease;
+}
+.table-frame {
+  border-radius: 10px;
+  border: 2px solid #DCE4F5;
+  overflow: hidden;
+  max-height: 350px;
+  overflow-y: auto;
+}
+.table-frame table {
+  width: 100%;
+  font-size: 14px;
+  border-collapse: collapse;
+}
+.basic-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-style: hidden;
+  table-layout: fixed;
+}
+.basic-table tr {
+  padding: 8px 10px;
+  text-align: center;
+  border: 1px solid #DCE4F5;
+}
+.basic-table tr {
+  line-height: 2.5rem;
+}
+.normal-table-frame {
+  border: 1px solid #E9E9E9;
+  font-size: 14px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+.normal-table {
+  table-layout: fixed;
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+.normal-table tr {
+  border: 1px solid #E9E9E9;
+  padding: 8px 10px;
+  line-height: 2.5rem;
+}
+
 /* common input, select custom */
 input::placeholder {
   color: #B8BFCE;
@@ -125,6 +184,9 @@ input[type="text"]:focus {
   height: 30px;
   width: 100%;
   font-size: 12px;
+}
+.basic-select {
+  width: 100%;
 }
 .normal-input,
 .normal-date-input,
@@ -197,8 +259,7 @@ input[type="text"]:focus {
 .radio-group input[type="radio"] {
   border-radius: 50%;
 }
-.checkbox-group input[type="checkbox"],
-.manage-table input[type="checkbox"] {
+.checkbox-group input[type="checkbox"] {
   border-radius: 20%;
 }
 .radio-group input[type="radio"],
@@ -243,7 +304,6 @@ input[type="text"]:focus {
   transform: scale(1.3);
   margin: 0px 5px;
   cursor: pointer;
-  /* border: 1px solid #000; */
 }
 .normal-checkbox input[type="checkbox"]
 {
@@ -251,7 +311,6 @@ input[type="text"]:focus {
   -moz-appearance: none;
   appearance: none;
   width: 18px;
-  /* height: 18px; */
   border: 2px solid #BEBEBE;
 }
 /* table in checkbox-group */
@@ -365,7 +424,6 @@ input[type="password"]:focus,
   color: #525252;
   display: flex;
   justify-content: flex-start;
-  /* margin-bottom: 50px; */
   align-items: center;
 }
 .checkbox-group label {
@@ -876,11 +934,9 @@ canvas {
   color: #fff;
   font-weight: 200;
   font-size: 14px;
-  display: flex;
-  align-items: center;
 }
 .sidebar-item a img {
-  /* width: 16px; */
+  width: 16px;
 }
 .home-back {
   background: #001CA6;
@@ -895,11 +951,11 @@ canvas {
 .sidebar-item span:after {
   content: "\f107";
   font-family: fontawesome;
-  float: right;
   padding-right: 5px;
   margin-top: 5px;
   transition: transform 0.5s ease;
   font-weight: normal;
+  float: right;
 }
 .sidebar-item:first-of-type span:after {
   content: none;
@@ -921,11 +977,10 @@ canvas {
 .submenu li:hover a {
   font-weight: 400;
 }
-/* .submenu a.active {
+.submenu li.active {
   background: #001CA6;
-  padding: 10px 0px;
-  border-radius: 10px;
-} */
+  border-radius: 5px;
+}
 .menu-toggle {
   display: block;
   margin-bottom: 10px;
@@ -1111,34 +1166,17 @@ canvas {
 .info-desc {
   flex: 5;
 }
-.table-frame {
-  border-radius: 10px;
-  border: 2px solid #DCE4F5;
-  overflow: hidden;
-  max-height: 350px;
-  overflow-y: auto;
+.info-table {
+  max-height: 400px;
 }
-.table-frame table {
-  width: 100%;
-  font-size: 14px;
-  border-collapse: collapse;
+.sibling-table {
+  max-height: 200px;
 }
-.normal-table-frame {
-  border: 1px solid #E9E9E9;
-  font-size: 14px;
+.info-table,
+.sibling-table,
+.move-frame {
   overflow: hidden;
   overflow-y: auto;
-}
-.normal-table {
-  table-layout: fixed;
-  width: 100%;
-  text-align: center;
-  border-collapse: collapse;
-}
-.normal-table tr {
-  border: 1px solid #E9E9E9;
-  padding: 8px 10px;
-  line-height: 2.5rem;
 }
 .info-filters {
   display: flex;
@@ -1157,34 +1195,12 @@ canvas {
 .student-search input[type='text'] {
   padding: 7px;
 }
-.basic-table,
-.sibling-table {
-  width: 100%;
-  border-collapse: collapse;
-  border-style: hidden;
-}
-.basic-table tr,
-.sibling-table tr {
-  padding: 8px 10px;
-  text-align: center;
-  border: 1px solid #DCE4F5;
-  line-height: 3rem;
-}
-.content-table {
-  padding: 15px;
-}
 .content-table tr {
   line-height: 1.6rem;
 }
-.content-table tr td:last-child {
-  width: 50%;
-  text-align-last: left;
+.content-table td:last-child {
+  text-align: left;
 }
-.content-table th,
-.content-table td {
-  padding: 15px;
-}
-/* .basic-table,  */
 .student-search {
   margin: 10px 0px 20px 0px;
   position: relative;
@@ -1201,14 +1217,6 @@ canvas {
 .student-search:hover {
   cursor: pointer;
 }
-tbody tr {
-  transition: .3s ease;
-}
-/* 노란 호버 */
-/* tbody tr:hover:not(.calendar-table tr) {
-  background: #FFD236;
-  cursor: pointer;
-} */
 #institute-exist + label,
 .radio-group label {
   margin-right: 20px;
@@ -1217,11 +1225,6 @@ tbody tr {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-.sibling-list h3 {
-  font-size: 16px;
-  font-weight: 500;
-  margin: 20px 0px 10px 0px;
 }
 /* Show and Hide Tab Content */
 .info-tab-btn {
@@ -1247,8 +1250,6 @@ tbody tr {
   position: absolute;
   top: 0;
   left: 0;
-  /* opacity: 0;
-  visibility: hidden; */
   display: none;
   transition: .35s ease;
   padding-bottom: 30px;
@@ -1257,14 +1258,6 @@ tbody tr {
 .tab.active {
   display: block;
 }
-/* .tab:target {
-  opacity: 1;
-  visibility: visible;
-} */
-.tab:first-child {
-  /* display: block; */
-}
-
 .student-form {
   display: flex;
   flex-direction: column;
@@ -1283,7 +1276,6 @@ tbody tr {
 .form-row label:not(.radio-group label) {
   font-weight: 500;
   white-space: nowrap;
-  /* display: inline-block; */
   width: 80px;
 }
 .form-row .normal-input,
@@ -1666,7 +1658,7 @@ tbody tr {
   text-align: center;
   padding: 20px 0px;
 }
-/* ======================= teacher-manage page ======================= */
+/* ======================= manage-teacher page ======================= */
 .manage-frame {
   width: 80%;
   display: flex;
@@ -1677,7 +1669,7 @@ tbody tr {
 .manager-info {
   flex: 4.5;
 }
-.manager-list-frame {
+.manager-frame {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -1732,7 +1724,7 @@ tbody tr {
 .manager-row {
   margin-bottom: 15px;
 }
-.manager-row .normal-input {
+.manager-row .basic-input {
   flex: 2;
   max-width: 300px;
 }
@@ -1769,7 +1761,7 @@ tbody tr {
 .move-list-frame {
   width: 70%;
 }
-.move-table-frame {
+.move-t-frame {
   max-height: 60vh;
 }
 .blank-adjust {
@@ -1779,21 +1771,17 @@ tbody tr {
   line-height: 1.6rem;
 }
 .move-table th,
-.move-table td,
-.move-list .content-table th,
-.move-list .content-table td {
-  padding: 8px;
+.move-table td {
+  padding: 8px 10px;
 }
-/* .basic-table tr:nth-child(even) {
-  background-color: #FBFCFF;
-} */
-.move-list .content-table td:last-child {
-  width: 35%;
+.content-table th,
+.content-table td {
+  padding: 8px 10px;
 }
 .move-list .month-adjust {
   margin: 15px;
 }
-.move-calendar-frame {
+.move-frame {
   max-height: 300px;
 }
 
@@ -1847,12 +1835,8 @@ tbody tr {
   justify-content: space-around;
   gap: 20px;
 }
-.entry-table {
-  table-layout: fixed;
-}
-.entry-table tr,
-.entry-table td {
-  /* padding: 0px 10px; */
+.out-frame {
+  height: 50vh;
 }
 .cancel-enroll,
 .restore-enroll {
@@ -1893,7 +1877,7 @@ tbody tr {
   color: #fff;
 }
 
-/* ======================= class-timetalbe page ======================= */
+/* ======================= class-timetable page ======================= */
 
 .time-table-frame {
   display: inline-block;
@@ -1919,7 +1903,7 @@ tbody tr {
   margin-bottom: 13px;
 }
 .prev-month-btn,
-.schedule-info-btn {
+.schedule-btn {
   border-radius: 20px;
   color: #fff;
   cursor: pointer;
@@ -1928,7 +1912,7 @@ tbody tr {
 .prev-month-btn {
   background-color: #02A7AF;
 }
-.schedule-info-btn {
+.schedule-btn {
   background-color: #E05F55;
 }
 .time-tab-menu {
@@ -1984,43 +1968,28 @@ tbody tr {
   background-color: #F7F9FF;
   font-weight: bold;
 }
-.time-table th:nth-child(1) {
-  width: 5;
-}
-.time-table th:nth-child(2) {
-  width: 15%;
-}
-.time-table th:nth-child(3) {
-  width: 19%;
-}
-.time-table th:nth-child(4) {
-  width: 50%;
-}
-.time-table th:nth-child(5) {
-  width: 10%;
-}
 .time-table tbody tr td:not(:nth-child(4)) {
   background-color: #F7F9FF;
 }
 .time-chocie-table {
   max-height: 60vh;
 }
-.manager-list-frame .month-adjust {
+.manager-frame .month-adjust {
   margin: 10px 0;
 }
-.time-chocie-table-frame {
+.time-chocie-frame {
   max-height: 70vh;
 }
-.time-chocie-table-frame label {
+.time-chocie-frame label {
   margin-right: 10px;
 }
-.time-chocie-table-frame label:last-child {
+.time-chocie-frame label:last-child {
   margin: 0px;
 }
-.time-chocie-table-frame > table {
+.time-chocie-frame > table {
   line-height: 1.6em;
 }
-.time-chocie-table-frame > table td:first-child {
+.time-chocie-frame > table td:first-child {
   font-weight: 600;
 }
 .badge-han, .badge-book {
@@ -2059,11 +2028,13 @@ tbody tr {
   margin-right: 10px;
   margin: 2px 10px;
 }
-/* class-timetable modal */
-.modal-frame {
-  height: 80vh;
-  width: 90%;
+.manager-add {
+  width: 95%;
   margin: auto;
+}
+.ma-modal {
+  margin-top: 20px;
+  max-height: 500px;
 }
 .time-change-modal-content {
   width: 900px;
@@ -2110,37 +2081,16 @@ tbody tr {
 .time-adjust-table th:nth-child(7) {
   width: 15%;
 }
-/* .time-adjust-table tbody tr td:nth-of-type(5),
-.time-adjust-table tbody tr td:nth-of-type(6),
-.time-adjust-table tbody tr td:nth-of-type(7) {
-  background-color: #fff;
-} */
-/* .time-adjust-table tr td:nth-of-type(3),
-.time-adjust-table tr td:nth-of-type(4),
-.time-adjust-table tr td:nth-of-type(5),
-.time-adjust-table tr td:nth-of-type(6),
-.time-adjust-table tr td:nth-of-type(7) {
-  border: none;
-} */
 .time-adjust-table tr td:nth-child(4) {
   border-right: 2px solid #DFE6F7;
   background: #F7F9FF;
 }
 input[type="time" i] {
-  border: none;
-  background: #F7F9FF;
+  border: 1ps solid #DCE4F5;
+  background: #EEF3FF;
   font-family: "Arial", sans-serif;
   color: #333;
 }
-/* select placeholder */
-/* select option[disabled] {
-  opacity: 0.6;
-} */
-/* .subjects,
-.coursebook,
-.schoolyear {
-  background: #fff;
-} */
 .time-change-modal-content .save-btn {
   margin-top: 30px;
 }
@@ -2252,12 +2202,26 @@ input[type="time" i] {
   flex: 1;
 }
 .class-before-after {
+  display: flex;
   flex: 1;
   margin-left: 20px;
 }
 .class-info {
   display: flex;
   margin-top: 15px;
+}
+.class-content {
+  position: relative;
+  height: 60vh;
+}
+.ctab {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+.ctab.active {
+  display: block;
 }
 .weeks-guide {
   flex: 3;
@@ -2304,7 +2268,7 @@ input[type="time" i] {
 .class-info-section .month-adjust {
   margin: 0;
 }
-.name-table-frame {
+.name-frame {
   min-height: 300px;
 }
 .modify-info {
@@ -2480,9 +2444,6 @@ input[type="time" i] {
 .sms-table th:nth-child(2) {
   width: 80%;
 }
-.jumpup-test tr {
-  line-height: 2.5rem;
-}
 .jumpup-test tfoot td:not(:first-child) {
   text-align-last: left;
 }
@@ -2509,16 +2470,15 @@ input[type="time" i] {
   align-items: center;
   gap: 10px;
 }
-.makeup-search .normal-date-input {
+.makeup-search .date-input {
   width: 30%;
 }
-/* .makeup-search .student-search input {
-  border: 1px solid #bdbdbd;
-  margin: 0px;
-} */
 .makeup-select {
   display: flex;
   justify-content: flex-end;
+}
+.makeup-select .basic-select {
+  width: 100px;
 }
 .makeup-table {
   max-height: 500px;
@@ -2639,7 +2599,7 @@ input[type="time" i] {
 .manage-sms-right {
   flex: 2;
 }
-.student-list-frame {
+.s-list-frame {
   max-height: 60vh;
   margin-top: 10px;
 }
@@ -2650,29 +2610,12 @@ input[type="time" i] {
   flex: 1;
   width: 100%;
 }
-.student-list-table th:nth-child(1),
-.student-list-table td:nth-child(1) {
+.s-list-table th:nth-child(1),
+.s-list-table td:nth-child(1) {
   display: inline-block;
 }
-.student-list-table input[type="checkbox"] {
+.s-list-table input[type="checkbox"] {
   display: flex;
-}
-.student-list-table 
-.student-list-table th:nth-child(2),
-.student-list-table td:nth-child(2) {
-  width: 10%;
-}
-.student-list-table th:nth-child(3),
-.student-list-table td:nth-child(3) {
-  width: 25%;
-}
-.student-list-table th:nth-child(4),
-.student-list-table td:nth-child(4) {
-  width: 25%;
-}
-.student-list-table th:nth-child(5),
-.student-list-table td:nth-child(5) {
-  width: 30%;
 }
 .charge-frame {
   margin-bottom: 10px;
@@ -2698,10 +2641,10 @@ input[type="time" i] {
 .send-adjust input {
   flex: 1;
 }
-.send-adjust input[type='time'] {
+/* .send-adjust input[type='time'] {
   border: 1px solid #bdbdbd;
   background: #fff;
-}
+} */
 .appoint-words-frame {
   margin-bottom: 10px;
 }
@@ -2714,7 +2657,6 @@ input[type="time" i] {
 }
 .sms-word-table th {
   text-align: left;
-  /* padding: 0px 10px; */
 }
 .sms-word-table th,
 .sms-word-table td:first-child {
@@ -2728,8 +2670,11 @@ input[type="time" i] {
   padding: 10px;
   max-height: 40px;
 }
+.sms-word-table .radio-group label {
+  margin-right: 0;
+}
 .sms-word-table td:first-child {
-  width: 25%;
+  width: 24%;
 }
 .sms-word-table p {
   text-align: left;
@@ -2740,6 +2685,7 @@ input[type="time" i] {
 }
 .directly-input {
   margin: 20px 0px;
+  display: block;
 }
 .manage-textarea {
   margin-top: 10px;
@@ -2850,6 +2796,7 @@ input[type="time" i] {
   margin-left: 10px;
   font-size: 25px;
   color: #7C7C7C;
+  cursor: pointer;
 }
 .word-content textarea {
   width: 250px;
@@ -2907,4 +2854,260 @@ input[type="time" i] {
 }
 .point-btn-frame button:nth-child(2) {
   background: #334DD7;
+}
+
+/* ======================= order page ======================= */
+.order-frame  {
+  width: 85%;
+}
+.book-order {
+  width: 35%;
+}
+.pre-order {
+  width: 65%;
+}
+.order-info {
+  font-size: 13px;
+  margin: 12px 0px;
+}
+.order-info span {
+  color: #334DD7;
+}
+.order-table {
+  max-height: 600px;
+}
+
+/* spinner custom */
+.spinner-frame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.custom-spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 25px;
+  border: 1px solid #D6D6D6;
+  background-color: #fff;
+  position: relative;
+}
+.custom-spinner input[type="number"] {
+  /* flex: 1; */
+  text-align: center;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background-color: transparent;
+  appearance: textfield;
+}
+.spinner-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-left: 1px solid #D6D6D6;
+}
+.spinner-buttons button {
+  width: 12px;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: #D6D6D6;
+  color: #8B8B8B;
+  cursor: pointer;
+  font-size: 8px;
+}
+.spinner-buttons button:hover {
+  background-color: #8B8B8B;
+  color: #fff;
+}
+.spinner-buttons button:active {
+  background-color: #5C5C5C;
+}
+.all-order {
+  background: #FFD236;
+  text-align: center;
+  padding: 7px;
+  margin-top: 10px;
+}
+.book-order-save {
+  text-align: center;
+  margin-top: 30px;
+  width: 100%;
+}
+.book-order-save button {
+  padding: 10px 50px;
+  background: #334DD7;
+}
+.preorder-frame {
+  max-height: 70vh;
+}
+.preorder-select {
+  display: flex;
+  justify-content: space-between;
+}
+.preorder-select .basic-select {
+  width: 100px;
+}
+.preorder-day {
+  display: flex;
+  gap: 10px;
+}
+.decrease {
+  color: #E65D3A;
+}
+.increase {
+  color: #334DD7;
+}
+
+/* ======================= order page ======================= */
+.return-table {
+  max-height: 300px;
+}
+.all-add {
+  max-height: 180px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+.add-extra {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.add-extra .custom-spinner {
+  height: 30px;
+}
+.add-extra .trash-icon::after {
+  color: #e65d3a;
+}
+.book-add,
+.discount-add {
+  color: #B6B5B5;
+  margin-top: 10px;
+  display: flex;
+  cursor: pointer;
+}
+.book-add::before,
+.discount-add::before {
+  content: "\e917";
+  font-family: xeicon;
+  margin-right: 5px;
+  font-size: 24px;
+}
+
+/* ======================= manage-deposit page ======================= */
+.deposit-frame {
+  width: 95%;
+}
+.deposit-student-list {
+  width: 40%;
+}
+.month-order {
+  width: 60%;
+}
+.deposit-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.deposit-search .normal-date-input {
+  flex: 1;
+}
+.deposit-search .student-search {
+  flex: 1;
+  margin: 0;
+}
+.deposit-select {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 0px 10px 0px;
+}
+.deposit-student {
+  max-height: 65vh;
+}
+.deposit-student th:first-child {
+  width: 12%;
+}
+.out-institute {
+  color: #e65d3a;
+}
+.month-select {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 25px;
+}
+.deposit-table {
+  height: 70vh;
+}
+.deposit-table .normal-input {
+  height: 25px;
+  width: 80px;
+}
+.deposit-table td:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.deposit-table th:first-child {
+  width: 8%;
+}
+
+/* ======================= manage-tuition page ======================= */
+
+.lump-sum  {
+  display: flex;
+  margin-top: 10px;
+}
+.lump-sum input[type="text"] {
+  width: 30%;
+}
+.book-order {
+  width: 40%;
+}
+.pre-order {
+  width: 60%;
+}
+.book-order .radio-group {
+  font-size: 14px;
+}
+.tuition-frame {
+  max-height: 70vh;
+  margin-top: 15px;
+}
+.tuition-table input {
+  width: 70%;
+  vertical-align: middle;
+}
+.discount-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  width: 90%;
+  margin-bottom: 10px;
+}
+.discount-row label{
+  width: 55px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.discount-row input {
+  flex: 4;
+}
+.ma {
+  margin-right: 30px;
+}
+.discount-row .basic-select {
+  flex: 3;
+}
+.discount-row .trash-icon:after {
+  color: #e65d3a;
+  margin: 0px;
+  font-size: 24px;
 }

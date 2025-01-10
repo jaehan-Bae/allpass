@@ -8,7 +8,7 @@
     <script src="/js/custom.js"></script>
     <script src="/js/loadHTML.js"></script>
   <link rel="stylesheet" href="/css/style.css">
-  <title>Document</title>
+  <title>시간표 등록</title>
 </head>
 <body>
   <div class="main-container">
@@ -21,7 +21,7 @@
         <div class="student-frame time-frame">
           <!-- section:left -->
           <section class="time-table-index">
-            <div class="manager-list-frame">
+            <div class="manager-frame">
               <div class="common-title">
                 <h2>시간표 등록</h2>
               </div>
@@ -32,7 +32,7 @@
               </div>
               <div class="calendar-overview">
                 <div class="prev-month-btn">전월 정보 불러오기</div>
-                <div class="schedule-info-btn">시간표 정보 변경</div>
+                <div class="schedule-btn">시간표 정보 변경</div>
               </div>
               <div class="time-tab-menu">
                 <button class="time-tab-button active" data-tab="mon">월</button>
@@ -124,7 +124,7 @@
                   <p>금요일 데이터</p>
                 </div>
               </div>
-              </div>
+            </div>
           </section>
           <!-- section:right -->
           <section class="time-name-list">
@@ -158,7 +158,7 @@
                 </select>
               </div>
             </div>
-            <div class="table-frame time-chocie-table-frame">
+            <div class="table-frame time-chocie-frame">
               <table class="basic-table">
                 <thead>
                   <tr>
@@ -168,6 +168,11 @@
                   </tr>
                 </thead>
                 <tbody id="">
+                  <colgroup>
+                    <col width="20%">
+                    <col width="20%">
+                    <col width="60%">
+                  </colgroup>
                   <tr>
                     <td>김호호</td>
                     <td>초1</td>
@@ -395,14 +400,14 @@
         <a href="#" class="btn-close"></a>
       </div>
       <div class="modal-notice">
-        <div class="modal-frame">
+        <div class="modal-frame manager-add">
           <div class="radio-group">
             <input type="radio" name="timeInfo" id="prev-info" checked>
             <label for="prev-info">이전 달 정보 불러오기</label>
             <input type="radio" name="timeInfo" id="time-new-regist">
             <label for="time-new-regist">새로 등록하기</label>
           </div>
-          <div class="table-frame time-table-frame">
+          <div class="table-frame ma-modal">
             <table class="time-table time-adjust-table">
               <thead>
                 <tr>
@@ -422,12 +427,12 @@
                   <td>1</td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
@@ -469,12 +474,12 @@
                   <td>2</td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
@@ -515,12 +520,12 @@
                   <td>3</td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
@@ -561,12 +566,12 @@
                   <td>4</td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
@@ -607,12 +612,12 @@
                   <td>6</td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
@@ -653,12 +658,12 @@
                   <td>5</td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
@@ -701,12 +706,12 @@
                   <td>1</td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
@@ -748,12 +753,12 @@
                   <td>2</td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
@@ -794,12 +799,12 @@
                   <td>3</td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
@@ -840,12 +845,12 @@
                   <td>4</td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
@@ -886,12 +891,12 @@
                   <td>6</td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
@@ -932,12 +937,12 @@
                   <td>5</td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
@@ -980,12 +985,12 @@
                   <td>1</td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
@@ -1027,12 +1032,12 @@
                   <td>2</td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
@@ -1073,12 +1078,12 @@
                   <td>3</td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
@@ -1119,12 +1124,12 @@
                   <td>4</td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
@@ -1165,12 +1170,12 @@
                   <td>6</td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
@@ -1211,12 +1216,12 @@
                   <td>5</td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
@@ -1259,12 +1264,12 @@
                   <td>1</td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
@@ -1306,12 +1311,12 @@
                   <td>2</td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
@@ -1352,12 +1357,12 @@
                   <td>3</td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
@@ -1398,12 +1403,12 @@
                   <td>4</td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
@@ -1444,12 +1449,12 @@
                   <td>6</td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
@@ -1490,12 +1495,12 @@
                   <td>5</td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
@@ -1534,16 +1539,16 @@
                 </tr>
                 <!-- 금 -->
                 <tr>
-                  <td rowspan="6">목</td>
+                  <td rowspan="6">금</td>
                   <td>1</td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
@@ -1585,12 +1590,12 @@
                   <td>2</td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
@@ -1631,12 +1636,12 @@
                   <td>3</td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
@@ -1677,12 +1682,12 @@
                   <td>4</td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
@@ -1723,12 +1728,12 @@
                   <td>6</td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
@@ -1769,12 +1774,12 @@
                   <td>5</td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
                     <div class="time-picker">
-                      <input type="time" class="time-input" value="">
+                      <input type="time" class="date-input" value="">
                     </div>
                   </td>
                   <td>
