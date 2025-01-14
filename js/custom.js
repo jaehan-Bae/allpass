@@ -1,4 +1,4 @@
-$(function(){
+$(document).ready(function() {
   /* ====== conslut.html ====== */
   // modal
   $('.counsel-button').click(function() {
@@ -126,31 +126,32 @@ $(function(){
     });
 
     
-  // spinner button
-    const inputField = document.querySelector('.custom-spinner input[type="number"]');
-    function increment() {
-      inputField.stepUp();
-    }
-    function decrement() {
-      inputField.stepDown();
-    }
-    document.querySelector('.spinner-buttons button:first-child').onclick = increment;
-    document.querySelector('.spinner-buttons button:last-child').onclick = decrement;
-    })
+    
+  });
+  
   
   /* ====== order.html ====== */
   // custom-spinner
   document.addEventListener('DOMContentLoaded', () => {
+    // 모든 spinner 처리
     document.querySelectorAll('.custom-spinner').forEach((spinner) => {
       const inputField = spinner.querySelector('input[type="number"]');
       const incrementButton = spinner.querySelector('.spinner-buttons button:first-child');
       const decrementButton = spinner.querySelector('.spinner-buttons button:last-child');
   
-      incrementButton.addEventListener('click', () => {
-        inputField.stepUp();
-      });
-      decrementButton.addEventListener('click', () => {
-        inputField.stepDown();
-      });
+      // 요소가 모두 존재하는지 확인
+      if (inputField && incrementButton && decrementButton) {
+        // 증가 버튼 이벤트
+        incrementButton.addEventListener('click', () => {
+          inputField.stepUp();
+        });
+  
+        // 감소 버튼 이벤트
+        decrementButton.addEventListener('click', () => {
+          inputField.stepDown();
+        });
+      } else {
+        console.error('Spinner 구성 요소를 찾을 수 없습니다.', spinner);
+      }
     });
   });

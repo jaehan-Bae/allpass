@@ -128,8 +128,6 @@ tbody tr {
   padding: 8px 10px;
   text-align: center;
   border: 1px solid #DCE4F5;
-}
-.basic-table tr {
   line-height: 2.5rem;
 }
 .normal-table-frame {
@@ -318,6 +316,9 @@ table .checkbox-group,
 table .normal-checkbox {
   margin: 0;
   display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 /* arrow custom */
 .arrow-left,
@@ -429,12 +430,14 @@ input[type="password"]:focus,
 .checkbox-group label {
   cursor: pointer;
 }
+.join-group .checkbox-group label {
+  font-size: 14px;
+}
 .join-group input[type="checkbox"],
 input[type="checkbox"] {
   cursor: pointer;
   width: 16px;
   height: 16px;
-  border: 1px solid #525252;
   border-radius: 50%;
   position: relative;
   margin-right: 5px;
@@ -480,6 +483,7 @@ input[type="checkbox"]:checked::after {
 .menu-container {
   display: flex;
   height: 100vh;
+  background: #fff;
 }
 .menu-container > div {
   height: 100vh;
@@ -505,7 +509,7 @@ input[type="checkbox"]:checked::after {
   background: #DCE4F8;
   border-radius: 25px 0 0 25px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding-left: 80px;
+  justify-content: center;
 }
 .menu-desc {
   width: 85%;
@@ -561,12 +565,12 @@ input[type="checkbox"]:checked::after {
 .menu-items {
   display: flex;
   justify-content: space-between;
+  gap: 15px;
 }
 .menu-item {
   background: #fff;
   padding: 5px 50px 30px 30px;
   border-radius: 10px;
-  margin-right: 50px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
   flex: 1;
   min-height: 250px;
@@ -701,10 +705,11 @@ input[type="checkbox"]:checked::after {
 
 /* ======================= join page ======================= */
 .join-container {
-  max-width: 600px;
-  margin: 20px auto;
+  max-width: 650px;
+  margin: auto;
   display: flex;
   flex-direction: column;
+  background: #fff;
 }
 .join-section {
   background: #334DD7;
@@ -729,12 +734,12 @@ input[type="checkbox"]:checked::after {
   padding: 29px;
 }
 .join-group {
-  margin-top: 25px;
+  margin-top: 20px;
 }
 .join-group label {
   display: block;
-  margin-bottom: 5px;
-  font-size: 18px;
+  margin-bottom: 10px;
+  font-size: 16px;
 }
 .join-group input:not([type="checkbox"]),
 .join-group select,
@@ -745,6 +750,10 @@ canvas {
   border: 1px solid #D1DCF4;
   background: #EEF3FF;
   border-radius: 5px;
+}
+.join-group input:not([type="checkbox"]),
+.join-group select {
+  padding: 10px;
 }
 .join-group input::placeholder {
   color: #B8BFCE;
@@ -787,6 +796,9 @@ canvas {
   color: #7C7C7C;
   margin-top: 20px;
   margin-bottom: 80px;
+}
+.join-group .checkbox-group {
+  margin-top: 5px;
 }
 .join-frame {
   margin: 20px 0px 30px 0px;
@@ -916,16 +928,19 @@ canvas {
 .main-frame {
   display: flex;
 }
-.sidebar {
+#sidebar-load {
   flex: 1;
-  background: #334DD7;
-  border-radius: 10px;
-  height: 90vh;
-  padding: 10px;
 }
 .main-info {
   flex: 9;
   padding: 0px 20px;
+  width: 100%;
+}
+.sidebar {
+  background: #334DD7;
+  border-radius: 10px;
+  height: 90vh;
+  padding: 10px;
 }
 .sidebar-item {
   margin-bottom: 20px;
@@ -996,7 +1011,7 @@ canvas {
   position: relative;
 }
 .welcome-img img {
-  max-width: 1500px;
+  width: 95%;
 }
 .welcome-greet {
   position: absolute;
@@ -1023,10 +1038,10 @@ canvas {
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   padding: 10px;
-  max-width: 1500px;
+  width: 95%;
   align-items: stretch;
 }
-.student-num, .absence-num, .edu-card, .book-card, .quick-menu {
+.student-num, .absence-num, .edu-card, .book-card {
   background: #fff;
   border-radius: 10px;
   padding: 20px;
@@ -1123,6 +1138,10 @@ canvas {
 .quick-menu {
   background: #BECEF5;
   text-align: center;
+  padding: 0 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
 }
 .quick-menu h2 {
   color: #fff;
@@ -1137,6 +1156,10 @@ canvas {
   font-size: 24px;
   margin-bottom: 15px;
   color: #fff;
+  width: 100%;
+}
+.mini-menu:last-child {
+  margin-bottom: 0;
 }
 .quick-desc a {
   transition: .3s ease;
@@ -1385,7 +1408,7 @@ canvas {
 }
 /* calendar */
 .calendar-container {
-  width: 800px;
+  width: inherit;
   background: #fff;
   border: 1px solid #ddd;
   border-radius: 10px;
@@ -1549,19 +1572,13 @@ canvas {
 }
 .counsel-write td {
   padding: 20px 0px;
-}
-.counsel-write th:nth-child(8) {
-  width: 19%;
-}
+}preorder-frame
 .counsel-write td:nth-child(8) {
   text-align: left;
 }
 .counsel-write td:nth-child(8),
 .counsel-write td:nth-child(9) {
   padding: 0px 20px;
-}
-.counsel-write .basic-select {
-  /* width: 10%; */
 }
 .counsel-write .date-input {
   width: 60%;
@@ -1730,7 +1747,6 @@ canvas {
 }
 
 /* ======================= student-inout page ======================= */
-.common-section,
 .move-summary,
 .move-reason,
 .move-list {
@@ -1738,6 +1754,9 @@ canvas {
   background: #fff;
   border-radius: 20px;
   padding: 20px;
+}
+.full-section {
+  width: 100%;
 }
 .move-summary {
   flex: 2;
@@ -1885,6 +1904,7 @@ canvas {
   border-radius: 10px;
   margin-top: 15px;
   max-height: 70%;
+  overflow: hidden;
 }
 .time-frame {
   width: 85%;
@@ -2191,6 +2211,11 @@ input[type="time" i] {
 .class-info-section {
   flex: 6;
 }
+.class-info-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .class-info-frame {
   width: 90%;
 }
@@ -2212,7 +2237,7 @@ input[type="time" i] {
 }
 .class-content {
   position: relative;
-  height: 60vh;
+  height: 70vh;
 }
 .ctab {
   position: absolute;
@@ -2408,15 +2433,6 @@ input[type="time" i] {
   width: 70%;
   line-height: 1.6em;
 }
-.details-table th:nth-child(1) {
-  width: 20%;
-}
-.details-table th:nth-child(2) {
-  width: 20%;
-}
-.details-table th:nth-child(3) {
-  width: 60%;
-}
 .details-table td:nth-child(3),
 .sms-table td:nth-child(2) {
   text-align: left;
@@ -2447,11 +2463,16 @@ input[type="time" i] {
 .jumpup-test tfoot td:not(:first-child) {
   text-align-last: left;
 }
-.jumpup-test tfoot td label {
-  font-size: 14px;
-}
 .jumpup-test td {
   padding: 0 10px;
+}
+.jumpup-test .checkbox-group,
+.book-table .checkbox-group {
+  display: inline-block;
+}
+.jumpup-test .checkbox-group label,
+.book-table .checkbox-group label {
+  font-size: 14px;
 }
 
 /* ======================= class page ======================= */
