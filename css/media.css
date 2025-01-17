@@ -37,7 +37,7 @@
     font-size: 16px;
   }
   #sidebar-load {
-    flex: 1.5;
+    flex: 1.7;
   }
   .radio-group input[type="radio"], 
   .checkbox-group input[type="checkbox"] {
@@ -53,6 +53,10 @@
     margin-right: 10px;
     font-size: 14px;
   }
+  .radio-group input[type="radio"]:checked::after,
+.checkbox-group input[type="checkbox"]:checked::after {
+  font-size: 10px;
+}
   /* ======================= student-main page ======================= */
   .info-summary {
     flex: 5;
@@ -122,6 +126,7 @@
   /* ======================= bfclass page ======================= */
   .class-info-frame {
     width: 100%;
+    height: auto;
     display: block;
   }
   .bf-main .student-frame > section {
@@ -186,7 +191,7 @@
   .sms-table {
     background: #fff;
   }
-      
+
   /* ======================= consult page ======================= */
   .counsel-write th {
   padding: 5px;
@@ -215,7 +220,12 @@
   .manage-sms-frame {
     width: 100%;
   }
-  
+  .sms-word-table td:first-child {
+    width: 30%;
+  }
+  #check-point {
+    font-size: 12px;
+  }
   /* ======================= manage-teacher page ======================= */
   .manage-frame {
     width: 100%;
@@ -293,9 +303,14 @@
   .payment-num, .unpaid-num {
     font-size: 2rem;
   }
+  
+    /* ======================= notice page ======================= */
+  .notice-inner {
+    width: 1000px;
+  }
 }
 
-/* smartphone 320 ~ 480px */
+/* join page smartphone 320 ~ 480px */
 @media (min-width:320px) and (max-width:480px) {
   .join-title {
     font-size: 2rem;
@@ -323,8 +338,7 @@
   }
 }
 
-
-/* tablet Pc 320 ~ 480px */
+/* join page tablet Pc 320 ~ 480px */
 @media (min-width:481) and (max-width: 768px) {
 
 }

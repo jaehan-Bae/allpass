@@ -1,3 +1,11 @@
+// 수정 필요
+// $(document).ready(function() {
+//   $('.menu-link').click(function() {
+//     $('.menu-link').removeClass('active');
+//     $(this).addClass('active');
+//   });
+// });
+
 $(document).ready(function() {
   /* ====== conslut.html ====== */
   // modal
@@ -45,23 +53,10 @@ $(document).ready(function() {
       $(this).next('.submenu').stop().slideToggle(300);
       $(this).toggleClass('active');
     });
-    
     $('.sidebar-item .submenu').click(function(){
       $(this).stop().slideUp(300);
     });
-    $('.sidebar-item .submenu li').click(function(e) {
-      e.stopPropagation(); // 이벤트 전파 방지
-    });
 
-    // 수정 필요
-    // $(document).on('click', '.submenu li', function() {
-    //   $(this).addClass('active').siblings().removeClass('active');
-    // });
-    
-    // $('.info-tab-btn a').click(function() {
-    //   $(this).addClass('active');
-    //   $(this).siblings('.info-tab-btn a').removeClass('active');
-    // });
 
     /* ====== student-main.html ====== */
     // student-main tab
@@ -80,19 +75,6 @@ $(document).ready(function() {
 
     /* ====== bfclass.html ====== */
     // class-timetable tab
-  //   const switchs = document.querySelectorAll('.class-before-after a');
-  //   const substance = document.querySelectorAll('.ctab')
-
-  // switchs.forEach(button => {
-  //   button.addEventListener('click', () => {
-  //     switchs.forEach(btn => btn.classList.remove('active'));
-  //     button.classList.add('active');
-  //     substance.forEach(substance => substance.classList.remove('active'));
-  //     const switchs = button.getAttribute('data-tab');
-  //     document.getElementById(switchs).classList.add('active');
-  //   })
-  // })
-
     const tabButtons = document.querySelectorAll('.class-before-after a');
     const tabContents = document.querySelectorAll('.ctab');
 
@@ -120,33 +102,36 @@ $(document).ready(function() {
         document.getElementById(tab).classList.add('active');
       });
     });
+
     // timetable information change -> schedule-btn modal
     $('.schedule-btn').click(function() {
       $('.time-change-modal').fadeIn();
     });
 
-    
-    
+    // notice.html
+    $('.notice-nums a').click(function() {
+      $('.notice-nums a').removeClass('active');
+      $(this).addClass('active');
+    });
   });
   
   
   /* ====== order.html ====== */
   // custom-spinner
   document.addEventListener('DOMContentLoaded', () => {
-    // 모든 spinner 처리
+    // All spinner
     document.querySelectorAll('.custom-spinner').forEach((spinner) => {
       const inputField = spinner.querySelector('input[type="number"]');
       const incrementButton = spinner.querySelector('.spinner-buttons button:first-child');
       const decrementButton = spinner.querySelector('.spinner-buttons button:last-child');
   
-      // 요소가 모두 존재하는지 확인
+      // Ensure that all elements exist
       if (inputField && incrementButton && decrementButton) {
-        // 증가 버튼 이벤트
+        // Increase button event
         incrementButton.addEventListener('click', () => {
           inputField.stepUp();
         });
-  
-        // 감소 버튼 이벤트
+        // Decease button event
         decrementButton.addEventListener('click', () => {
           inputField.stepDown();
         });

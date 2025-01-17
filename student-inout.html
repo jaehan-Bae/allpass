@@ -24,9 +24,12 @@
         <div class="thrid-frame">
           <!-- section:left -->
           <section class="move-summary">
-            <div class="common-title">
-              <h2>전입 / 전출</h2>
-            </div>
+            <a class="print-title" href="/print-student-inout.html">
+              <div class="common-title">
+                <h2>전입 / 전출</h2>
+              </div>
+              <div class="print">인쇄</div>
+            </a>
             <div class="info-filters">
               <div class="basic-select">
                 <select name="subject" id="subject-filter">
@@ -46,7 +49,7 @@
               </div>
             </div>
             <div class="student-search join-group">
-              <input type="text" id="student-name" name="studentName" placeholder="이름으로 검색">
+              <input type="text" id="search-name" name="searchName" placeholder="이름으로 검색">
             </div>
             <div class="time-order">
               <div></div>
@@ -181,9 +184,8 @@
               </table>
             </div>
           </section>
-          
+          <!-- section:right-top -->
           <section class="move-desc">
-            <!-- section:right-top -->
             <div class="move-reason">
               <div class="move-reason-frame">
                 <form action="" class="student-form">

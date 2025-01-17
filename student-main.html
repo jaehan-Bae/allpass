@@ -47,7 +47,7 @@
               </div>
             </div>
             <div class="student-search join-group">
-              <input type="text" id="student-name" name="studentName" placeholder="이름으로 검색">
+              <input type="text" id="search-name" name="searchName" placeholder="이름으로 검색">
             </div>
             <div class="time-order">
               <div class="checkbox-group">
@@ -172,7 +172,6 @@
               </table>
             </div>
           </section>
-          
           <!-- section:right -->
           <section class="info-desc">
             <div class="info-tab-inner">
@@ -183,9 +182,10 @@
                 <a href="#tab4" data-tab="tab4">상담내역</a>
               </div>
               <div class="info-tab-content">
+                <!-- ##### tab1 ##### -->
                 <div id="tab1" class="tab active">
                   <form action="" class="student-form">
-                    <!-- 상태 -->
+                    <!-- tab1: row1 -->
                     <div class="form-row">
                       <label>상태</label>
                       <div class="radio-group">
@@ -195,17 +195,19 @@
                         <label for="institute-leave">퇴원</label>
                       </div>
                     </div>
-                    <!-- 이름, 생년월일 -->
+                    <!-- tab1: row2 -->
                     <div class="form-row">
                       <label for="student-name">이름</label>
                       <input type="text" id="student-name" name="studentName" class="basic-input" placeholder="이름을 입력해주세요">
                       <label for="birth-date">생년월일</label>
                       <input type="text" id="birth-date"  name="birthDate" class="basic-input" placeholder="생년월일을 입력해주세요">
                     </div>
-                    <!-- 학교, 학년 -->
+                    <!-- tab1: row3 -->
                     <div class="form-row">
                       <label for="school-name">학교</label>
-                      <input type="text" id="school-name" name="school" class="basic-input" placeholder="학교를 입력해주세요">
+                      <div class="school-row">
+                        <input type="text" id="school-name" name="school" class="basic-input" placeholder="학교를 입력해주세요">
+                      </div>
                       <label for="grade-filter">학년</label>
                       <div class="basic-select">
                         <select name="grade" id="grade-filter">
@@ -218,7 +220,7 @@
                         </select>
                       </div>
                     </div>
-                    <!-- 성별 -->
+                    <!-- tab1: row4 -->
                     <div class="form-row">
                       <label>성별</label>
                       <div class="radio-group">
@@ -228,7 +230,7 @@
                         <label for="female">여자</label>
                       </div>
                     </div>
-                    <!-- 부모HP -->
+                    <!-- tab1: row5 -->
                     <div class="form-row">
                       <label for="phone1">부모HP</label>
                       <div class="phone-group" id="guardian-contact-group">
@@ -240,18 +242,18 @@
                       </div>
                       <label for="relation-filter">학생과의 관계</label>
                       <div class="basic-select">
-                        <select id="relation-filter" name="relation" class="basic-select">
+                        <select id="relation-filter" name="relation">
                           <option value="mother">모</option>
                           <option value="father">부</option>
                         </select>
                       </div>
                     </div>
-                    <!-- 주소 -->
+                    <!-- tab1: row6 -->
                     <div class="form-full form-row">
                       <label for="address-input">주소</label>
                       <input type="text" id="address-input" name="address" class="basic-input" placeholder="주소를 입력해 주세요">
                     </div>
-                    <!-- 한스쿨, 북스쿨 -->
+                    <!-- tab1: row7 -->
                     <div class="form-row">
                       <label for="hanschool-date">한스쿨 입회</label>
                       <input type="date" id="hanschool-date" name="hanschoolDate" class="date-input">
@@ -264,6 +266,7 @@
                     <button type="submit" class="save-btn student-btn">저장하기</button>
                   </form>
                 </div>
+                <!-- ##### tab2 ##### -->
                 <div id="tab2" class="tab">
                   <form action="" class="student-form">
                     <div class="form-row">
@@ -277,7 +280,7 @@
                         <label for="book-school">북스쿨</label>
                       </div>
                     </div>
-                    <!-- 한스쿨 단계 -->
+                    <!-- han-school -->
                     <div class="han-logo">
                       <img src="/image/logo_han.png" alt="">
                       <hr class="han-hr">
@@ -301,9 +304,8 @@
                           <option value="">하니쌤</option>
                         </select>
                       </div>
-
                     </div>
-                    <!-- 북스쿨 단계 -->
+                    <!-- book-school -->
                     <div class="book-logo">
                       <img src="/image/logo_reader.png" alt="">
                       <hr class="book-hr">
@@ -329,14 +331,14 @@
                       </div>
                     </div>
                     <div class="dotted-line"></div>
-                    <!-- 주소 -->
+                    <!-- fee input -->
                     <div class="form-row">
                       <label for="education-fee">교육비</label>
                       <input type="text" id="education-fee" name="educationFee" class="basic-input" placeholder="">
                       <label for="textbook-fee">교재비</label>
                       <input type="text" id="textbook-fee" name="textbookFee" class="basic-input" placeholder="">
                     </div>
-                    <!-- 메모 -->
+                    <!-- memo textarea -->
                     <div class="form-row">
                       <label for="memo">메모사항</label>
                       <textarea id="memo" name="notes" rows="4"></textarea>
@@ -344,6 +346,7 @@
                     <button type="submit" class="save-btn">저장하기</button>
                   </form>
                 </div>
+                <!-- ##### tab3 ##### -->
                 <div id="tab3" class="tab">
                   <form action="" class="student-form">
                     <div class="calendar-container">
@@ -418,9 +421,11 @@
                     </div>
                   </form>
                 </div>
+                <!-- ##### tab4 ##### -->
                 <div id="tab4" class="tab">
                   <form action="" class="student-form">
                     <div class="form-row">
+                      <!-- tab4: row1 -->
                       <div class="title">상담 형태</div>
                       <div class="radio-group">
                         <input type="radio" id="phone" name="counselling" value="phone" checked>
@@ -431,7 +436,7 @@
                         <label for="meet">대면</label>
                       </div>
                     </div>
-                    <!-- 일자 -->
+                    <!-- tab4: row2 -->
                     <div class="form-row">
                       <label for="counsel-date">일자</label>
                       <input type="date" id="counsel-date" name="counselDate" class="date-input">
@@ -443,12 +448,12 @@
                         </select>
                       </div>
                     </div>
-                    <!-- 상담내용 -->
+                    <!-- tab4: row3 -->
                     <div class="form-row">
                       <label for="consult-content">상담내용</label>
                       <textarea id="consult-content" name="consultContent" rows="7" placeholder="상담내용을 작성해 주세요."></textarea>
                     </div>
-                    <!-- 이전 상담 목록 -->
+                    <!-- tab4: table -->
                     <div class="title">이전 상담 목록</div>
                     <div class="table-frame">
                       <table class="basic-table content-table">
@@ -507,6 +512,5 @@
       </main>
     </div>
   </div>
-  <script src="/js/loadHTML.js"></script>
 </body>
 </html>

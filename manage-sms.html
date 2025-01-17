@@ -213,12 +213,12 @@
             </div>
             <div class="point-frame">
               <div class="charge-frame">
-                <label for="">사용 가능 금액</label>
+                <label>사용 가능 금액</label>
                 <span class="left-charge">39,800</span>원
                 <button type="button" class="common-button" id="check-point" name="action" value="check-point">포인트 충전/발송내역</button>
               </div>
               <div class="form-row">
-                <label for="">발송시기</label>
+                <label>발송시기</label>
                 <div class="radio-group">
                   <input type="radio" id="immediately" name="sendTimming" value="" checked>
                   <label for="immediately">즉시</label>
@@ -227,7 +227,6 @@
                 </div>
               </div>
               <div class="form-row">
-                <label for=""></label>
                 <div class="send-adjust">
                   <input type="date" id="" name="" class="date-input">
                   <input type="time" id="" name="" class="date-input">
@@ -236,7 +235,7 @@
             </div>
             <div class="appoint-words-frame">
               <div class="appoint-sub radio-group">
-                <input type="radio" id="reservation" name="sendTimming" value="">
+                <input type="radio" id="word-chocie" name="sendTimming" value="">
                 <label for="word-chocie">지정 문구 선택</label>
                 <button type="button" class="common-button" id="word-modify" name="words" value="word-modify">문구 수정</button>
               </div>
@@ -248,7 +247,7 @@
                     <td>
                       <div class="radio-group">
                         <input type="radio" id="word-class" name="wordSms" value="">
-                        <label for="week-label">수업</label>
+                        <label for="word-class">수업</label>
                       </div>
                     </td>
                     <td>
@@ -261,7 +260,7 @@
                     <td>
                       <div class="radio-group">
                         <input type="radio" id="word-attend" name="wordSms" value="">
-                        <label for="week-label">출석</label>
+                        <label for="word-attend">출석</label>
                       </div>
                     </td>
                     <td>
@@ -274,7 +273,7 @@
                     <td>
                       <div class="radio-group">
                         <input type="radio" id="word-makeup" name="wordSms" value="">
-                        <label for="week-label">보강</label>
+                        <label for="word-makeup">보강</label>
                       </div>
                     </td>
                     <td>
@@ -287,7 +286,7 @@
                     <td>
                       <div class="radio-group">
                         <input type="radio" id="word-tuition" name="wordSms" value="">
-                        <label for="week-label">수강료</label>
+                        <label for="word-tuition">수강료</label>
                       </div>
                     </td>
                     <td>
@@ -300,7 +299,7 @@
                     <td>
                       <div class="radio-group">
                         <input type="radio" id="word-bookfee" name="wordSms" value="">
-                        <label for="week-label">교재비</label>
+                        <label for="word-bookfee">교재비</label>
                       </div>
                     </td>
                     <td>
@@ -313,29 +312,7 @@
                     <td>
                       <div class="radio-group">
                         <input type="radio" id="word-addition" name="wordSms" value="">
-                        <label for="week-label">보강안내</label>
-                      </div>
-                    </td>
-                    <td>
-                      <p>안녕하세요, 호호서당입니다. [#학생이름]학생의 보강일정은 [#보강날짜]입니다.</p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="radio-group">
-                        <input type="radio" id="word-addition" name="wordSms" value="">
-                        <label for="week-label">보강안내</label>
-                      </div>
-                    </td>
-                    <td>
-                      <p>안녕하세요, 호호서당입니다. [#학생이름]학생의 보강일정은 [#보강날짜]입니다.</p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="radio-group">
-                        <input type="radio" id="word-addition" name="wordSms" value="">
-                        <label for="week-label">보강안내</label>
+                        <label for="word-addition">보강안내</label>
                       </div>
                     </td>
                     <td>
@@ -347,7 +324,7 @@
             </div>
             <div class="radio-group directly-input">
               <input type="radio" id="self-input" name="selfInput" value="">
-              <label for="week-label">직접 입력</label>
+              <label for="self-input">직접 입력</label>
               <textarea name="" id="" class="manage-textarea" placeholder="내용을 입력해 주세요."></textarea>
             </div>
           </section>
@@ -458,7 +435,7 @@
                 <div class="word-list-frame">
                   <div class="word-select">
                     <div class="normal-select word-list">
-                      <select id="give-class" name="giveClass" class="">
+                      <select id="give-class2" name="giveClass2" class="">
                         <option value="">수업</option>
                         <option value="" selected>출석</option>
                         <option value="">보강</option>
@@ -473,7 +450,7 @@
                 <div class="word-list-frame">
                   <div class="word-select">
                     <div class="normal-select word-list">
-                      <select id="give-class" name="giveClass" class="">
+                      <select id="give-class3" name="giveClass3" class="">
                         <option value="">수업</option>
                         <option value="">출석</option>
                         <option value="" selected>보강</option>
@@ -489,7 +466,7 @@
                 <div class="word-list-frame">
                   <div class="word-select">
                     <div class="normal-select word-list">
-                      <select id="give-class" name="giveClass" class="">
+                      <select id="give-class4" name="giveClass4" class="">
                         <option value="">수업</option>
                         <option value="">출석</option>
                         <option value="">보강</option>
@@ -505,7 +482,7 @@
                 <div class="word-list-frame">
                   <div class="word-select">
                     <div class="normal-select word-list">
-                      <select id="give-class" name="giveClass" class="">
+                      <select id="give-class5" name="giveClass5" class="">
                         <option value="">수업</option>
                         <option value="">출석</option>
                         <option value="">보강</option>
