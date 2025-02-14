@@ -547,7 +547,7 @@ input[type="checkbox"]:checked::after {
   justify-content: center;
 }
 .menu-desc {
-  width: 85%;
+  width: 75%;
 }
 .menu-exit {
   display: flex;
@@ -587,11 +587,11 @@ input[type="checkbox"]:checked::after {
   display: flex;
   align-items: center;
   background: #F7F9FF;
-  padding: 30px;
+  padding: 25px;
   border-radius: 15px;
   color: #6E6F76;
-  margin: 30px 0px 50px 0px;
-  font-size: 24px;
+  margin: 30px 0px 35px 0px;
+  font-size: 21px;
 }
 .menu-notice:hover {
   text-decoration: underline;
@@ -617,16 +617,16 @@ input[type="checkbox"]:checked::after {
   margin-right: 0;
 }
 .menu-item img {
-  width: 170px;
-  height: 170px;
+  width: 150px;
+  height: 150px;
   object-fit: contain;
   margin-bottom: 15px;
 }
 .menu-item:nth-last-child(2) img {
-  width: 150px;
+  width: 130px;
 }
 .menu-item h2 {
-  font-size: 35px;
+  font-size: 30px;
   color: #0960F1;
   font-weight: bold;
 }
@@ -644,7 +644,7 @@ input[type="checkbox"]:checked::after {
 }
 .menu-item p {
   color: #3f4152;
-  font-size: 21px;
+  font-size: 18px;
   margin: 10px 0px 25px 0px;
 }
 .menu-item > button {
@@ -656,7 +656,7 @@ input[type="checkbox"]:checked::after {
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-size: 21px;
+  font-size: 18px;
 }
 .menu-item > button:hover {
   background-color: #084ab8;
@@ -672,13 +672,13 @@ input[type="checkbox"]:checked::after {
   justify-content: space-between;
   align-items: center;
   max-width: 100%;
-  margin-top: 50px;
+  margin-top: 40px;
 }
 .menu-input {
   display: flex;
   align-items: center;
   background: #bbc6e0;
-  padding: 40px 30px;
+  padding: 36px 30px;
   border-radius: 50px;
   flex: 3;
   margin-right: 50px;
@@ -686,7 +686,7 @@ input[type="checkbox"]:checked::after {
   box-sizing: border-box;
 }
 .input-label {
-  font-size: 26px;
+  font-size: 20px;
   color: #5b657e;
   font-weight: bold;
   margin-right: 20px;
@@ -696,7 +696,7 @@ input[type="checkbox"]:checked::after {
   border: none;
   background: transparent ;
   color: white;
-  font-size: 24px;
+  font-size: 21px;
   font-weight: bold;
   border-radius: 20px;
   cursor: pointer;
